@@ -5,6 +5,7 @@ extern void initFondos();
 
 extern void MostrarPuerta();
 
+
 extern void MostrarPuertaAbierta();
 
 

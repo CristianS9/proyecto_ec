@@ -80,17 +80,12 @@ void initFondos() {
 
 /* Para cada imagen que se quiera llevar a pantalla hay que hacer una de estas funciones. */
 
+/*
 void MostrarPuerta() {
     dmaCopyHalfWords(DMA_CHANNEL,
-                     PuertaBitmap, /* Variable generada automáticamente */
-                     (uint16 *)BG_BMP_RAM(0), /* Dirección del fondo 3 principal */
-                     PuertaBitmapLen); /* Longitud (en bytes) generada automáticamente */
+                     PuertaBitmap, // Variable generada automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
+                     PuertaBitmapLen); // Longitud (en bytes) generada automáticamente
 }
-void MostrarPuertaAbierta() {
-    dmaCopyHalfWords(DMA_CHANNEL,
-                     PuertaAbiertaBitmap, /* Variable generada automáticamente */
-                     (uint16 *)BG_BMP_RAM(0), /* Dirección del fondo 3 principal */
-                     PuertaAbiertaBitmapLen); /* Longitud (en bytes) generada automáticamente */
-}
-
+*/
 

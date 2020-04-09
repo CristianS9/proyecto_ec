@@ -12,26 +12,21 @@ dovoto y otro de Jaeden Amero
 #include "fondos.h"
 #include "sprites.h"
 #include "defines.h"
-#include "rutservs.h"
+#include "rutserv.h"
 #include "teclado.h"
 #include "temporizadores.h"
-#include "tactil.h"
 
 //-----------------------------------------------------
 // Variables globales
 //-----------------------------------------------------
 
-int estado;
 
-volatile int i_tecla = 0;
+int TactilTocada();//no esta en defines aun
+//extern int segs;
 
-void tec() {
-    i_tecla = TeclaPulsada();
-    iprintf("\x1b[10;0H %d",i_tecla);
-
-}
 
 int main() {
+	
 
 	// Variables del main
 	touchPosition pos_pantalla;
@@ -46,7 +41,7 @@ int main() {
     	initFondos();
 
     	// Mostrar fondos en pantalla. 
-    	MostrarPuerta();
+   // 	MostrarPuerta();
 
 	// Inicializar memoria de sprites y guardar en ella los sprites 
 	initSpriteMem();
@@ -62,33 +57,31 @@ int main() {
 	// en este caso time(NULL). 
 	// srand() sólo se suele activar una vez por ejecución y no devuelve ningún valor 
 	srand (time(NULL));
-
-    
+	
+//	int tecla;  
     
 // ...
 	MostrarRombo(1,8,8);
+//	MostrarPuertaAbierta();
+	
+	interrupciones();
+	
+	
+	estado=ESPERA;
+	while(1)
+	{	
 
-
-
-    TECLAS_CNT =  0x4003;
-    TIMER0_CNT = 0xC3;
-    TIMER0_DAT = 32768;
-
-
-    irqSet(IRQ_KEYS,IntTec);
-    irqEnable(IRQ_KEYS);
-
-    irqSet(IRQ_TIMER0,IntTemp);
-    irqEnable(IRQ_TIMER0);
-
-
-
-    while(1){
-
-
-
-
-    }
-} 
-
+	}
+}
+/*
+TactilTocada(){
+	int r=0;
+	touchPosition p_pan;
+	touchRead(&p_pan);
+	if(p_pan.px!=0 || p_pan.py!=0){
+		r=1;	
+	}
+	return r;
+}
+ */
 

@@ -1,5 +1,5 @@
-/*------------------------------------
-rutserv.c
+﻿/*-------------------------------------
+ rutserv.c
 -------------------------------------*/
 // Añadir los includes que sean necesarios
 #include <nds.h>
@@ -13,24 +13,22 @@ rutserv.c
 // Además es aquí donde se configuran los registros de control de los periféricos.
 
 void HabilitarInterrupciones() { // En el Controlador de Interrupciones
-
+	IME=0;
   // Primero se inhiben todas las interrupciones
-    IME = 0;
-
+	IE=IE | 0x1008;
   // Escribir un 1 en el bit correspondiente 
-    IE = 0x1008;
-
+   	IME=1;
   // Se vuelven a habilitar todas las interrupciones    
-    IME = 1;
+ 
 }
 
 
-void ProgramarRegistrosControl() {
+void ProgramarRegistrosControl() { 
 
   // Registro de Control del Teclado
-    TECLAS_CNT =  0x4003;
+  TECLAS_CNT=0x4003; // Teclas A y B por interrupcion
 
-    // TIMER0_CNT
+  TIMER0_CNT=0x00C1;  
   //   El temporizador se activa poniendo un 1 en el 7º bit.
   //   El temporizador interrumpirá al desbordarse el contador, 
   //      si hay un 1 en el 6º bit.
@@ -39,40 +37,37 @@ void ProgramarRegistrosControl() {
   //      01 frecuencia 33554432/64 hz
   //      10 frecuencia 33554432/256 hz
   //      11 frecuencia 33554432/1024 hz
-
-
-  // TIMER0_DAT 
+    
+  TIMER0_DAT =56798;//60 ticks por seg
   //   Indica a partir de qué valor tiene que empezar a contar (latch)
-
-
+   
 }
 
 void DefinirVectorInterrupciones() { // Rutinas de atención
 
   // Rutina de Atención al Teclado
-  irqSet(TECLAS_CNT,IntTec);
-
-    
+    irqSet(IRQ_KEYS, IntTec);
+    //irqEnable(IRQ_KEYS); para habilitar los IE especificos
   // Rutinas de Atención a los Temporizadores
-  	
+    irqSet(IRQ_TIMER0, IntTemp);
 }
 
 void InhibirInterrupciones() { // En el Controlador de Interrupciones
 
   // Primero se inhiben todas las interrupciones
-    
+        IME=0;
   // Escribir un 0 en el bit correspondiente 
-    
+	IE=IE & 0xFFFFEFF7;
   // Se vuelven a habilitar todas las interrupciones
-  	
+  	IME=1;
 }
 
 
-void interrupciones(){
-    HabilitarInterrupciones();
-    ProgramarRegistrosControl();
-    DefinirVectorInterrupciones();
-
+void interrupciones()
+{
+  HabilitarInterrupciones();
+  ProgramarRegistrosControl();
+  DefinirVectorInterrupciones();
 }
 
 

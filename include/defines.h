@@ -18,12 +18,8 @@ defines.h
 #define TECLAS_DAT	(*(vuint16*)0x4000130) //Registro de datos del teclado
 #define TECLAS_CNT	(*(vuint16*)0x4000132) //Registro de control del teclado
 
-
 // Aquí se definen los registros del temporizador
-#define TIMER0_CNT   	(*(vuint16*)0x04000102)
-#define TIMER0_DAT      (*(vuint16*)0x04000100)
-
-
+#define TIMER0_CNT   	(*(vuint16*)0x04000102) //Registro de control del temporizador
 // El temporizador se activa poniendo un 1 en el 7º bit.
 // El temporizador interrumpirá al desbordarse el contador, si hay un 1 en el 6º bit.
 // Los dos bits de menos peso indican lo siguiente:
@@ -49,12 +45,16 @@ defines.h
 #define L		9
 
 // Asignar un nombre a cada estado
-#define INICIO	0
+#define ESPERA	0
+#define CERRADA 1
+#define ABIERTA 2
 //...
 
 
 // Variables globales
 
+extern int seg;
+extern int tseg;
 extern int estado;
 
 //...
