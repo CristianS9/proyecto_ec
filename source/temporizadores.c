@@ -14,12 +14,6 @@ void IntTemp() {
 	tic++;
 
 
-	//PRUEBA DE FUNCIONAMIENTO
-
-	//MODIFICANDO INT TEMP
-
-
-
 }
 
 
