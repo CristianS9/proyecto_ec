@@ -23,7 +23,7 @@ dovoto y otro de Jaeden Amero
 
 int TactilTocada();//no esta en defines aun
 //extern int segs;
-
+void moverRombo();
 
 int main() {
 	
@@ -58,19 +58,44 @@ int main() {
 	// srand() sólo se suele activar una vez por ejecución y no devuelve ningún valor 
 	srand (time(NULL));
 	
-//	int tecla;  
-    
-// ...
-	MostrarRombo(1,8,8);
-//	MostrarPuertaAbierta();
-	
-	interrupciones();
-	
-	
-	estado=ESPERA;
-	while(1)
-	{	
 
+	double pos_x = 8.00;
+    double pos_y = 8;
+
+    void moverRombo(int tecla){
+        switch (tecla){
+            case ARRIBA:
+                pos_y -= 0.01;
+                break;
+            case ABAJO:
+                pos_y += 0.01;
+                break;
+            case IZDA:
+                pos_x -= 0.01;;
+                break;
+            case DCHA:
+                pos_x += 0.01;;
+                break;
+        }
+        MostrarRombo(1,(int) pos_x, (int) pos_y);
+    }
+
+
+	MostrarRombo(1,pos_x,pos_y);
+
+	MostrarPuerta();
+
+	interrupciones();
+
+	int tecla;
+	while(1)	{
+        tecla = TeclaPulsada();
+        if(tecla == ARRIBA
+            || tecla == ABAJO
+            || tecla == IZDA
+            || tecla == DCHA){
+            moverRombo(tecla);
+        }
 	}
 }
 /*
