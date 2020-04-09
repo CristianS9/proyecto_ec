@@ -46,7 +46,11 @@ int  TeclaPulsada() {
 
 // Rutina de atencion a la interrupcion del teclado
 void IntTec() {
-
+    int i= 0;
+    if (i==0){
+        i++;
+    }
+		
 
 }
 
