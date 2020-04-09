@@ -13,7 +13,11 @@ void IntTemp() {
 	static int tic=0;
 	tic++;
 
+
 	//PRUEBA DE FUNCIONAMIENTO
+
+	//MODIFICANDO INT TEMP
+
 
 
 }
