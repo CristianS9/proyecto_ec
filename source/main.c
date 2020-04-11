@@ -74,10 +74,13 @@ int main() {
         if(teclas_pulsadas[DCHA] == 1){
             pos_x += 0.01;
         }
-        /*
+
         if(teclas_pulsadas[ARRIBA] == 1){
-            pos_y -= 0.01;
+            aceleracion = 0;
+            pos_y -= 0.03;
+            MostrarRombo(1,(int) pos_x, (int) pos_y);
         }
+        /*
         if(teclas_pulsadas[ABAJO] == 1){
             pos_y += 0.01;
         }
@@ -105,10 +108,13 @@ int main() {
 
 
 
+
     void gravedad(int * teclas_pulsadas){
         if(pos_y<=150 && teclas_pulsadas[A] != 1){
+
             aceleracion += 0.000003;
             pos_y += aceleracion;
+
             MostrarRombo(1,(int) pos_x, (int) pos_y);
         }
         if(pos_y >= 150){
@@ -118,7 +124,7 @@ int main() {
 
 	while(1){
 	    int * teclas_pulsadas = teclasPulsadas();
-        //gravedad(teclas_pulsadas);
+        gravedad(teclas_pulsadas);
 
         if(teclas_pulsadas[IZDA] == 1  || teclas_pulsadas[DCHA] == 1 || teclas_pulsadas[ARRIBA] == 1 || teclas_pulsadas[ABAJO] == 1 ){
 

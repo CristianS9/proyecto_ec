@@ -68,12 +68,13 @@ int * teclasPulsadas(){
 
 
 
-
 // Rutina de atencion a la interrupcion del teclado
 void IntTec() {
+
     aceleracion = 0;
     pos_y -= 3;
     MostrarRombo(1,(int) pos_x, (int) pos_y);
+
 }
 
 
