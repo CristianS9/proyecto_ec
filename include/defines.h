@@ -56,5 +56,7 @@ defines.h
 extern int seg;
 extern int tseg;
 extern int estado;
-
+extern double pos_x;
+extern double pos_y;
+extern double aceleracion;
 //...

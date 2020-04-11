@@ -12,8 +12,11 @@ dovoto y otro de Jaeden Amero
 /* añadir aquí los includes para cada fondo. */
 
 #include "fondos.h"
-#include "Puerta.h"
-#include "PuertaAbierta.h"
+#include "fondo1.h"
+#include "fondo2.h"
+#include "fondo3.h"
+
+
 
 /* Seleccionar un canal DMA para copiar a memoria las imágenes */
 static const int DMA_CHANNEL = 3;
@@ -81,11 +84,22 @@ void initFondos() {
 /* Para cada imagen que se quiera llevar a pantalla hay que hacer una de estas funciones. */
 
 
-void MostrarPuerta() {
+void fondo1() {
     dmaCopyHalfWords(DMA_CHANNEL,
-                     PuertaBitmap, // Variable generada automáticamente
+                     fondo1Bitmap, // Variable generada automáticamente
                      (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
-                     PuertaBitmapLen); // Longitud (en bytes) generada automáticamente
+                     fondo1BitmapLen); // Longitud (en bytes) generada automáticamente
+}void fondo2() {
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     fondo2Bitmap, // Variable generada automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
+                     fondo2BitmapLen); // Longitud (en bytes) generada automáticamente
+}void fondo3() {
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     fondo3Bitmap, // Variable generada automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
+                     fondo3BitmapLen); // Longitud (en bytes) generada automáticamente
 }
+
 
 

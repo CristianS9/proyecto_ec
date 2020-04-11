@@ -40,15 +40,41 @@ int  TeclaPulsada() {
    // A=0; B=1; Select=2; Start=3; Der=4; Izq=5;
    // Arriba=6; Abajo=7; R=8; L=9;
    // -1 en otros casos
-
 }
+int teclas_pulsadas[10] = {0};
+int * teclasPulsadas(){
+
+    for (int i = 0; i < 10; ++i) {
+        teclas_pulsadas[i] = 0;
+    }
+
+
+
+    if((TECLAS_DAT & 0X0001)==0){ teclas_pulsadas[A] = 1; };
+    if((TECLAS_DAT & 0X0002)==0){ teclas_pulsadas[B] = 1; };
+    if((TECLAS_DAT & 0X0004)==0){ teclas_pulsadas[SELECT] = 1; };
+    if((TECLAS_DAT & 0X0008)==0){ teclas_pulsadas[START] = 1; };
+    if((TECLAS_DAT & 0X0010)==0){ teclas_pulsadas[DCHA] = 1; };
+    if((TECLAS_DAT & 0X0020)==0){ teclas_pulsadas[IZDA] = 1; };
+    if((TECLAS_DAT & 0X0040)==0){ teclas_pulsadas[ARRIBA] = 1; };
+    if((TECLAS_DAT & 0X0080)==0){ teclas_pulsadas[ABAJO] = 1; };
+    if((TECLAS_DAT & 0X0100)==0){ teclas_pulsadas[R] = 1; };
+    if((TECLAS_DAT & 0X0200)==0){ teclas_pulsadas[L] = 1; };
+
+    return  teclas_pulsadas;
+}
+
+
+
+
 
 
 // Rutina de atencion a la interrupcion del teclado
 void IntTec() {
-
+    aceleracion = 0;
+    pos_y -= 3;
+    MostrarRombo(1,(int) pos_x, (int) pos_y);
 }
-
 
 
 
