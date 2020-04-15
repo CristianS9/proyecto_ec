@@ -8,6 +8,6 @@ extern int tecla; // variable para guardar el valor de la tecla pulsada
 extern int TeclaPulsada();
 extern int * teclasPulsadas();
 
+extern void movimientoPersonaje();
 //Rutina de atenci�n a la interrupci�n del teclado
 extern void IntTec();
-

@@ -13,6 +13,9 @@ dovoto y otro de Jaeden Amero
 u16* gfxRombo;
 u16* gfxRomboGrande;
 
+double pos_x = 8;
+double pos_y = 150;
+
 
 /* Inicializar la memoria de Sprites. */
 void initSpriteMem() {
@@ -270,6 +273,27 @@ int i;
 	{	
 		gfxRomboGrande[i] = RomboGrande[i*2] | (RomboGrande[(i*2)+1]<<8);				
 	}
+}
+
+
+void moverPersonaje(int * teclas_pulsadas){
+    if(teclas_pulsadas[IZDA] == 1){
+        pos_x -= 0.01;
+    }
+    if(teclas_pulsadas[DCHA] == 1){
+        pos_x += 0.01;
+    }
+
+    if(teclas_pulsadas[ARRIBA] == 1){
+        //aceleracion = 0;
+        pos_y -= 0.03;
+    }
+    /*
+    if(teclas_pulsadas[ABAJO] == 1){
+        pos_y += 0.01;
+    }
+     */
+    MostrarRombo(1,(int) pos_x, (int) pos_y);
 }
 
 

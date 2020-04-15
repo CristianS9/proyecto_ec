@@ -15,6 +15,7 @@ dovoto y otro de Jaeden Amero
 #include "rutserv.h"
 #include "teclado.h"
 #include "temporizadores.h"
+#include "funciones/gravedad.h"
 
 //-----------------------------------------------------
 // Variables globales
@@ -26,9 +27,8 @@ int TactilTocada();//no esta en defines aun
 void moverRombo();
 
 
-double pos_x = 8;
-double pos_y = 150;
-double aceleracion = 0.0;
+
+
 
 
 int main() {
@@ -67,37 +67,7 @@ int main() {
 
 
 
-    void moverRombo(int * teclas_pulsadas){
-        if(teclas_pulsadas[IZDA] == 1){
-            pos_x -= 0.01;
-        }
-        if(teclas_pulsadas[DCHA] == 1){
-            pos_x += 0.01;
-        }
 
-        if(teclas_pulsadas[ARRIBA] == 1){
-            aceleracion = 0;
-            pos_y -= 0.03;
-            MostrarRombo(1,(int) pos_x, (int) pos_y);
-        }
-        /*
-        if(teclas_pulsadas[ABAJO] == 1){
-            pos_y += 0.01;
-        }
-         */
-
-
-
-        /*switch (tecla){
-            case IZDA:
-                pos_x -= 0.01;
-                break;
-            case DCHA:
-                pos_x += 0.01;
-                break;
-        }*/
-        MostrarRombo(1,(int) pos_x, (int) pos_y);
-    }
 
 
 	MostrarRombo(1,pos_x,pos_y);
@@ -109,27 +79,10 @@ int main() {
 
 
 
-    void gravedad(int * teclas_pulsadas){
-        if(pos_y<=150 && teclas_pulsadas[A] != 1){
-
-            aceleracion += 0.000003;
-            pos_y += aceleracion;
-
-            MostrarRombo(1,(int) pos_x, (int) pos_y);
-        }
-        if(pos_y >= 150){
-            aceleracion = 0.0;
-        }
-    }
 
 	while(1){
-	    int * teclas_pulsadas = teclasPulsadas();
-        gravedad(teclas_pulsadas);
-
-        if(teclas_pulsadas[IZDA] == 1  || teclas_pulsadas[DCHA] == 1 || teclas_pulsadas[ARRIBA] == 1 || teclas_pulsadas[ABAJO] == 1 ){
-
-          moverRombo(teclas_pulsadas);
-        }
+	    movimientoPersonaje();
+       // gravedad(teclas_pulsadas);
 	}
 }
 /*

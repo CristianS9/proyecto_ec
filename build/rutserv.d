@@ -62,6 +62,7 @@ rutserv.o: \
  /opt/devkitpro/libnds/include/nds/arm9/nand.h \
  /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/teclado.h \
  /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/defines.h \
+ /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/funciones/gravedad.h \
  /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/temporizadores.h
 
 /opt/devkitpro/libnds/include/nds.h:
@@ -187,5 +188,7 @@ rutserv.o: \
 /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/teclado.h:
 
 /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/defines.h:
+
+/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/funciones/gravedad.h:
 
 /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/temporizadores.h:

@@ -63,6 +63,7 @@ main.o: \
  /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/fondos.h \
  /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/sprites.h \
  /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/defines.h \
+ /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/funciones/gravedad.h \
  /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/rutserv.h \
  /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/teclado.h \
  /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/temporizadores.h
@@ -192,6 +193,8 @@ main.o: \
 /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/sprites.h:
 
 /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/defines.h:
+
+/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/funciones/gravedad.h:
 
 /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/rutserv.h:
 

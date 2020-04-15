@@ -25,6 +25,11 @@ extern void BorrarRombo(int indice, int x, int y);
 
 extern void MostrarRomboGrande(int x, int y);
 extern void BorrarRomboGrande(int x, int y);
+extern void moverPersonaje();
+
+// Variabels grlobales de sprites
+extern double pos_x;
+extern double pos_y;
 
 
 
