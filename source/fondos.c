@@ -15,6 +15,21 @@ dovoto y otro de Jaeden Amero
 #include "fondo1.h"
 #include "fondo2.h"
 #include "fondo3.h"
+#include "fondoMuerte.h"
+#include "fondo2Muerte.h"
+#include "fondo3Muerte.h"
+#include "Cielo.h"
+#include "Cielo2.h"
+#include "Cielo3.h"
+#include "Cielomuerte.h"
+#include "Cielo2muerte.h"
+#include "cielo3muerte.h"
+#include "nether.h"
+#include "nether2.h"
+#include "nether3.h"
+#include "nethermuerte.h"
+#include "nether2muerte.h"
+#include "nether3muerte.h"
 
 
 
@@ -175,9 +190,9 @@ void over1() {
 
 }void cielo3Muerte() {
     dmaCopyHalfWords(DMA_CHANNEL,
-                     Cielo3muerteBitmap, // Variable generada automáticamente
+                     cielo3muerteBitmap, // Variable generada automáticamente
                      (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
-                     Cielo3muerteBitmapLen); // Longitud (en bytes) generada automáticamente
+                     cielo3muerteBitmapLen); // Longitud (en bytes) generada automáticamente
 
 
 
