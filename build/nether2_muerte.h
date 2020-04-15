@@ -1,9 +1,9 @@
 
-//{{BLOCK(fondo3)
+//{{BLOCK(nether2_muerte)
 
 //======================================================================
 //
-//	fondo3, 255x191@16, 
+//	nether2_muerte, 255x191@16, 
 //	Alphabit on.
 //	+ bitmap not compressed
 //	Total size: 97792 = 97792
@@ -14,12 +14,12 @@
 //
 //======================================================================
 
-#ifndef GRIT_FONDO3_H
-#define GRIT_FONDO3_H
+#ifndef GRIT_NETHER2_MUERTE_H
+#define GRIT_NETHER2_MUERTE_H
 
-#define fondo3BitmapLen 97792
-extern const unsigned int fondo3Bitmap[24448];
+#define nether2_muerteBitmapLen 97792
+extern const unsigned int nether2_muerteBitmap[24448];
 
-#endif // GRIT_FONDO3_H
+#endif // GRIT_NETHER2_MUERTE_H
 
-//}}BLOCK(fondo3)
+//}}BLOCK(nether2_muerte)

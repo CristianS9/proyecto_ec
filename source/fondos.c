@@ -84,21 +84,149 @@ void initFondos() {
 /* Para cada imagen que se quiera llevar a pantalla hay que hacer una de estas funciones. */
 
 
-void fondo1() {
+void over1() {
     dmaCopyHalfWords(DMA_CHANNEL,
                      fondo1Bitmap, // Variable generada automáticamente
                      (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
                      fondo1BitmapLen); // Longitud (en bytes) generada automáticamente
-}void fondo2() {
+
+
+
+}void over2() {
     dmaCopyHalfWords(DMA_CHANNEL,
                      fondo2Bitmap, // Variable generada automáticamente
                      (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
                      fondo2BitmapLen); // Longitud (en bytes) generada automáticamente
-}void fondo3() {
+
+
+
+}void over3() {
     dmaCopyHalfWords(DMA_CHANNEL,
                      fondo3Bitmap, // Variable generada automáticamente
                      (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
                      fondo3BitmapLen); // Longitud (en bytes) generada automáticamente
+
+
+
+}void over1Muerte() {
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     fondo_MuerteBitmap, // Variable generada automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
+                     fondo_MuerteBitmapLen); // Longitud (en bytes) generada automáticamente
+
+
+
+}void over2Muerte() {
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     fondo2_MuerteBitmap, // Variable generada automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
+                     fondo2_MuerteBitmapLen); // Longitud (en bytes) generada automáticamente
+
+
+
+}void over3Muerte() {
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     fondo3_MuerteBitmap, // Variable generada automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
+                     fondo3_MuerteBitmapLen); // Longitud (en bytes) generada automáticamente
+
+
+
+
+}void cielo1() {
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     CieloBitmap, // Variable generada automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
+                     CieloBitmapLen); // Longitud (en bytes) generada automáticamente
+
+
+
+}void cielo2() {
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     Cielo2Bitmap, // Variable generada automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
+                     Cielo2BitmapLen); // Longitud (en bytes) generada automáticamente
+
+
+
+}void cielo3() {
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     Cielo3Bitmap, // Variable generada automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
+                     Cielo3BitmapLen); // Longitud (en bytes) generada automáticamente
+
+
+
+}void cielo1Muerte() {
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     Cielo_muerteBitmap, // Variable generada automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
+                     Cielo_muerteBitmapLen); // Longitud (en bytes) generada automáticamente
+
+
+
+}void cielo2Muerte() {
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     Cielo2_muerteBitmap, // Variable generada automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
+                     Cielo2_muerteBitmapLen); // Longitud (en bytes) generada automáticamente
+
+
+
+}void cielo3Muerte() {
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     Cielo3_muerteBitmap, // Variable generada automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
+                     Cielo3_muerteBitmapLen); // Longitud (en bytes) generada automáticamente
+
+
+
+
+}void nether1() {
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     netherBitmap, // Variable generada automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
+                     netherBitmapLen); // Longitud (en bytes) generada automáticamente
+
+
+
+}void nether2() {
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     nether2Bitmap, // Variable generada automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
+                     nether2BitmapLen); // Longitud (en bytes) generada automáticamente
+
+
+
+}void nether3() {
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     nether3Bitmap, // Variable generada automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
+                     nether3BitmapLen); // Longitud (en bytes) generada automáticamente
+
+
+
+}void nether1Muerte() {
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     nether_muerteBitmap, // Variable generada automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
+                     nether_muerteBitmapLen); // Longitud (en bytes) generada automáticamente
+
+
+
+}void nether2Muerte() {
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     nether2_muerteBitmap, // Variable generada automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
+                     nether2_muerteBitmapLen); // Longitud (en bytes) generada automáticamente
+
+
+
+}void nether3Muerte() {
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     nether3_muerteBitmap, // Variable generada automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
+                     nether3_muerteBitmapLen); // Longitud (en bytes) generada automáticamente
 }
 
 

@@ -1,12 +1,12 @@
 
-//{{BLOCK(fondo3)
+//{{BLOCK(Cielo2)
 
 //======================================================================
 //
-//	fondo3, 255x191@16, 
+//	Cielo2, 255x192@16, 
 //	Alphabit on.
 //	+ bitmap not compressed
-//	Total size: 97792 = 97792
+//	Total size: 98304 = 98304
 //
 //	Time-stamp: 2020-04-15, 10:15:36
 //	Exported by Cearn's GBA Image Transmogrifier, v0.8.15
@@ -14,12 +14,12 @@
 //
 //======================================================================
 
-#ifndef GRIT_FONDO3_H
-#define GRIT_FONDO3_H
+#ifndef GRIT_CIELO2_H
+#define GRIT_CIELO2_H
 
-#define fondo3BitmapLen 97792
-extern const unsigned int fondo3Bitmap[24448];
+#define Cielo2BitmapLen 98304
+extern const unsigned int Cielo2Bitmap[24576];
 
-#endif // GRIT_FONDO3_H
+#endif // GRIT_CIELO2_H
 
-//}}BLOCK(fondo3)
+//}}BLOCK(Cielo2)
