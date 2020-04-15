@@ -128,8 +128,8 @@ int main() {
         if(teclas_pulsadas[IZDA] == 1  || teclas_pulsadas[DCHA] == 1 || teclas_pulsadas[ARRIBA] == 1 || teclas_pulsadas[ABAJO] == 1 ){
 
           moverRombo(teclas_pulsadas);
-        }
-	}*/
+        }*/
+	}
 }
 /*
 TactilTocada(){
