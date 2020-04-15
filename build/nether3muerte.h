@@ -1,9 +1,9 @@
 
-//{{BLOCK(Cielo2)
+//{{BLOCK(nether3muerte)
 
 //======================================================================
 //
-//	Cielo2, 255x191@16, 
+//	nether3muerte, 255x191@16, 
 //	Alphabit on.
 //	+ bitmap not compressed
 //	Total size: 97792 = 97792
@@ -14,12 +14,12 @@
 //
 //======================================================================
 
-#ifndef GRIT_CIELO2_H
-#define GRIT_CIELO2_H
+#ifndef GRIT_NETHER3MUERTE_H
+#define GRIT_NETHER3MUERTE_H
 
-#define Cielo2BitmapLen 97792
-extern const unsigned int Cielo2Bitmap[24448];
+#define nether3muerteBitmapLen 97792
+extern const unsigned int nether3muerteBitmap[24448];
 
-#endif // GRIT_CIELO2_H
+#endif // GRIT_NETHER3MUERTE_H
 
-//}}BLOCK(Cielo2)
+//}}BLOCK(nether3muerte)

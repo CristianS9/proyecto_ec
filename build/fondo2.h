@@ -1,9 +1,9 @@
 
-//{{BLOCK(Cielo2)
+//{{BLOCK(fondo2)
 
 //======================================================================
 //
-//	Cielo2, 255x191@16, 
+//	fondo2, 255x191@16, 
 //	Alphabit on.
 //	+ bitmap not compressed
 //	Total size: 97792 = 97792
@@ -14,12 +14,12 @@
 //
 //======================================================================
 
-#ifndef GRIT_CIELO2_H
-#define GRIT_CIELO2_H
+#ifndef GRIT_FONDO2_H
+#define GRIT_FONDO2_H
 
-#define Cielo2BitmapLen 97792
-extern const unsigned int Cielo2Bitmap[24448];
+#define fondo2BitmapLen 97792
+extern const unsigned int fondo2Bitmap[24448];
 
-#endif // GRIT_CIELO2_H
+#endif // GRIT_FONDO2_H
 
-//}}BLOCK(Cielo2)
+//}}BLOCK(fondo2)

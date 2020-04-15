@@ -1,0 +1,1 @@
+nethermuerte.o: nethermuerte.s
