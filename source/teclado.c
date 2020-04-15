@@ -69,6 +69,9 @@ int * teclasPulsadas(){
 
 void movimientoPersonaje(){
     int * teclas_pulsadas = teclasPulsadas();
+    if (teclas_pulsadas[DCHA] == 1){
+
+    }
     if(teclas_pulsadas[IZDA] == 1  || teclas_pulsadas[DCHA] == 1 || teclas_pulsadas[ARRIBA] == 1 || teclas_pulsadas[ABAJO] == 1 ){
         moverPersonaje(teclas_pulsadas);
     }

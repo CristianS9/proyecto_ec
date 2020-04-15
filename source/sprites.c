@@ -13,8 +13,10 @@ dovoto y otro de Jaeden Amero
 u16* gfxRombo;
 u16* gfxRomboGrande;
 
-double pos_x = 8;
-double pos_y = 150;
+double personaje_pos_x = 8;
+double personaje_pos_y = 150;
+double personaje_movimeinto_i = 0.01;
+double personaje_movimeinto_d = 0.01;
 
 
 /* Inicializar la memoria de Sprites. */
@@ -278,15 +280,15 @@ int i;
 
 void moverPersonaje(int * teclas_pulsadas){
     if(teclas_pulsadas[IZDA] == 1){
-        pos_x -= 0.01;
+        personaje_pos_x -= personaje_movimeinto_i;
     }
     if(teclas_pulsadas[DCHA] == 1){
-        pos_x += 0.01;
+        personaje_pos_x += personaje_movimeinto_d;
     }
 
     if(teclas_pulsadas[ARRIBA] == 1){
         //aceleracion = 0;
-        pos_y -= 0.03;
+        personaje_pos_y -= 0.03;
     }
     /*
     if(teclas_pulsadas[ABAJO] == 1){
