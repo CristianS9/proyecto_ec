@@ -27,8 +27,11 @@ void moverRombo();
 
 
 double pos_x = 8;
-double pos_y = 150;
-double aceleracion = 0.0;
+double pos_y = 110;
+//double aceleracion = 0.0;
+int ESTADO;
+int seg=0;
+int inversor=1;
 
 
 int main() {
@@ -64,27 +67,27 @@ int main() {
 	// srand() sólo se suele activar una vez por ejecución y no devuelve ningún valor 
 	srand (time(NULL));
 	
+	ESTADO=NORMAL;
 
 
-
-    /*void moverRombo(int * teclas_pulsadas){
+    	void moverRombo(int * teclas_pulsadas){
         if(teclas_pulsadas[IZDA] == 1){
-            pos_x -= 0.01;
+            pos_x -= 0.006;
         }
         if(teclas_pulsadas[DCHA] == 1){
-            pos_x += 0.01;
+            pos_x += 0.006;
         }
 
         if(teclas_pulsadas[ARRIBA] == 1){
-            aceleracion = 0;
+            //aceleracion = 0;
             pos_y -= 0.03;
             MostrarRombo(1,(int) pos_x, (int) pos_y);
-        }*/
+        }
         /*
         if(teclas_pulsadas[ABAJO] == 1){
             pos_y += 0.01;
         }
-         */
+         
 
 
 
@@ -97,7 +100,7 @@ int main() {
                 break;
         }*/
         //MostrarRombo(1,(int) pos_x, (int) pos_y);
-    //}
+    	}
 
 
 	MostrarRombo(1,pos_x,pos_y);
@@ -109,28 +112,49 @@ int main() {
 
 
 
-   /* void gravedad(int * teclas_pulsadas){
-        if(pos_y<=150 && teclas_pulsadas[A] != 1){
+    void gravedad(int * teclas_pulsadas){
+	int correc=0;
+        if(pos_y<=150 && ESTADO!=SALTO){
 
-            aceleracion += 0.000003;
-            pos_y += aceleracion;
+            //aceleracion += 0.000003;
+		
+            pos_y += 0.007001/inversor;
+        }
+        else if( ESTADO==SALTO){
+		if(seg<=15){
+            		pos_y -=0.007;
+		}
+		else if( pos_y<=150){
+			pos_y += 0.007001/inversor;
 
-            MostrarRombo(1,(int) pos_x, (int) pos_y);
-        }
-        if(pos_y >= 150){
-            aceleracion = 0.0;
-        }
-    }*/
+			
+		}else if(correc<5){
+			correc++;
+			ESTADO=NORMAL;
+			seg=0;
+			inversor=1;
+		}else{
+			correc=0;
+		}
+	}else if(pos_y>150){//correción de posición
+		pos_y -=0.000001;
+		inversor=1;
+	}
+        
+
+	MostrarRombo(1,(int) pos_x, (int) pos_y);
+    }
 	while(1){
-	    /*int * teclas_pulsadas = teclasPulsadas();
+	    int * teclas_pulsadas = teclasPulsadas();
         gravedad(teclas_pulsadas);
 
-        if(teclas_pulsadas[IZDA] == 1  || teclas_pulsadas[DCHA] == 1 || teclas_pulsadas[ARRIBA] == 1 || teclas_pulsadas[ABAJO] == 1 ){
 
-          moverRombo(teclas_pulsadas);
-        }*/
+
+          		moverRombo(teclas_pulsadas);
+        	
 	}
-}
+ }
+
 /*
 TactilTocada(){
 	int r=0;

@@ -70,10 +70,17 @@ int * teclasPulsadas(){
 
 // Rutina de atencion a la interrupcion del teclado
 void IntTec() {
-
-    aceleracion = 0;
-    pos_y -= 3;
-    MostrarRombo(1,(int) pos_x, (int) pos_y);
+	int * teclas_pulsadas = teclasPulsadas();
+	if(teclas_pulsadas[A]==1 && ESTADO==NORMAL){	
+		/*aceleracion = 0;
+		pos_y -= 3;
+		MostrarRombo(1,(int) pos_x, (int) pos_y);*/
+		ESTADO=SALTO;
+		//inversor=-1;
+	}else if(teclas_pulsadas[B]==1 && (ESTADO==NORMAL || ESTADO==SALTO)){
+		inversor=3;
+	}
+	
 
 }
 

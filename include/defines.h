@@ -45,14 +45,15 @@ defines.h
 #define L		9
 
 // Asignar un nombre a cada estado
-#define ESPERA	0
-#define CERRADA 1
-#define ABIERTA 2
+#define NORMAL	0
+#define SALTO 1
+#define PARACAIDAS 2
 //...
 
 
 // Variables globales
-
+extern int ESTADO;
+extern int inversor;
 extern int seg;
 extern int tseg;
 extern int estado;
