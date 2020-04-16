@@ -32,7 +32,8 @@ double pos_y = 110;
 int ESTADO;
 int seg=0;
 int inversor=1;
-
+int vida=100;
+int puntuacion=0;
 
 int main() {
 	
@@ -68,17 +69,20 @@ int main() {
 	srand (time(NULL));
 	
 	ESTADO=NORMAL;
-
+	
+	iprintf("\x1b[01;17H vida: %d ",vida);
+	iprintf("\x1b[01;00H puntuacion: %d ",puntuacion);
+	iprintf("\x1b[02;00H   -------------------------");
 
     	void moverRombo(int * teclas_pulsadas){
-        if(teclas_pulsadas[IZDA] == 1){
+        if(teclas_pulsadas[IZDA] == 1 && vida>0){
             pos_x -= 0.006;
         }
-        if(teclas_pulsadas[DCHA] == 1){
+        if(teclas_pulsadas[DCHA] == 1 && vida>0){
             pos_x += 0.006;
         }
 
-        if(teclas_pulsadas[ARRIBA] == 1){
+        if(teclas_pulsadas[ARRIBA] == 1 && vida>0){
             //aceleracion = 0;
             pos_y -= 0.03;
             MostrarRombo(1,(int) pos_x, (int) pos_y);

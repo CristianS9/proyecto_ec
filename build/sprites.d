@@ -1,4 +1,4 @@
-sprites.o: /home/iker/proyecto_ec/source/sprites.c \
+sprites.o: /home/iker/proyecto_ec/proyecto_ec/source/sprites.c \
  /opt/devkitpro/libnds/include/nds.h \
  /opt/devkitpro/libnds/include/nds/libversion.h \
  /opt/devkitpro/libnds/include/nds/ndstypes.h \
@@ -59,8 +59,8 @@ sprites.o: /home/iker/proyecto_ec/source/sprites.c \
  /opt/devkitpro/libnds/include/nds/arm9/video.h \
  /opt/devkitpro/libnds/include/nds/arm9/videoGL.h \
  /opt/devkitpro/libnds/include/nds/arm9/nand.h \
- /home/iker/proyecto_ec/include/sprites.h \
- /home/iker/proyecto_ec/include/defines.h
+ /home/iker/proyecto_ec/proyecto_ec/include/sprites.h \
+ /home/iker/proyecto_ec/proyecto_ec/include/defines.h
 
 /opt/devkitpro/libnds/include/nds.h:
 
@@ -182,6 +182,6 @@ sprites.o: /home/iker/proyecto_ec/source/sprites.c \
 
 /opt/devkitpro/libnds/include/nds/arm9/nand.h:
 
-/home/iker/proyecto_ec/include/sprites.h:
+/home/iker/proyecto_ec/proyecto_ec/include/sprites.h:
 
-/home/iker/proyecto_ec/include/defines.h:
+/home/iker/proyecto_ec/proyecto_ec/include/defines.h:

@@ -55,7 +55,8 @@ defines.h
 extern int ESTADO;
 extern int inversor;
 extern int seg;
-extern int tseg;
+extern int vida;
+extern int puntuacion;
 extern int estado;
 extern double pos_x;
 extern double pos_y;

@@ -1,4 +1,4 @@
-teclado.o: /home/iker/proyecto_ec/source/teclado.c \
+teclado.o: /home/iker/proyecto_ec/proyecto_ec/source/teclado.c \
  /opt/devkitpro/libnds/include/nds.h \
  /opt/devkitpro/libnds/include/nds/libversion.h \
  /opt/devkitpro/libnds/include/nds/ndstypes.h \
@@ -59,9 +59,9 @@ teclado.o: /home/iker/proyecto_ec/source/teclado.c \
  /opt/devkitpro/libnds/include/nds/arm9/video.h \
  /opt/devkitpro/libnds/include/nds/arm9/videoGL.h \
  /opt/devkitpro/libnds/include/nds/arm9/nand.h \
- /home/iker/proyecto_ec/include/defines.h \
- /home/iker/proyecto_ec/include/sprites.h \
- /home/iker/proyecto_ec/include/fondos.h
+ /home/iker/proyecto_ec/proyecto_ec/include/defines.h \
+ /home/iker/proyecto_ec/proyecto_ec/include/sprites.h \
+ /home/iker/proyecto_ec/proyecto_ec/include/fondos.h
 
 /opt/devkitpro/libnds/include/nds.h:
 
@@ -183,8 +183,8 @@ teclado.o: /home/iker/proyecto_ec/source/teclado.c \
 
 /opt/devkitpro/libnds/include/nds/arm9/nand.h:
 
-/home/iker/proyecto_ec/include/defines.h:
+/home/iker/proyecto_ec/proyecto_ec/include/defines.h:
 
-/home/iker/proyecto_ec/include/sprites.h:
+/home/iker/proyecto_ec/proyecto_ec/include/sprites.h:
 
-/home/iker/proyecto_ec/include/fondos.h:
+/home/iker/proyecto_ec/proyecto_ec/include/fondos.h:

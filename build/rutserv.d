@@ -1,4 +1,4 @@
-rutserv.o: /home/iker/proyecto_ec/source/rutserv.c \
+rutserv.o: /home/iker/proyecto_ec/proyecto_ec/source/rutserv.c \
  /opt/devkitpro/libnds/include/nds.h \
  /opt/devkitpro/libnds/include/nds/libversion.h \
  /opt/devkitpro/libnds/include/nds/ndstypes.h \
@@ -59,9 +59,9 @@ rutserv.o: /home/iker/proyecto_ec/source/rutserv.c \
  /opt/devkitpro/libnds/include/nds/arm9/video.h \
  /opt/devkitpro/libnds/include/nds/arm9/videoGL.h \
  /opt/devkitpro/libnds/include/nds/arm9/nand.h \
- /home/iker/proyecto_ec/include/teclado.h \
- /home/iker/proyecto_ec/include/defines.h \
- /home/iker/proyecto_ec/include/temporizadores.h
+ /home/iker/proyecto_ec/proyecto_ec/include/teclado.h \
+ /home/iker/proyecto_ec/proyecto_ec/include/defines.h \
+ /home/iker/proyecto_ec/proyecto_ec/include/temporizadores.h
 
 /opt/devkitpro/libnds/include/nds.h:
 
@@ -183,8 +183,8 @@ rutserv.o: /home/iker/proyecto_ec/source/rutserv.c \
 
 /opt/devkitpro/libnds/include/nds/arm9/nand.h:
 
-/home/iker/proyecto_ec/include/teclado.h:
+/home/iker/proyecto_ec/proyecto_ec/include/teclado.h:
 
-/home/iker/proyecto_ec/include/defines.h:
+/home/iker/proyecto_ec/proyecto_ec/include/defines.h:
 
-/home/iker/proyecto_ec/include/temporizadores.h:
+/home/iker/proyecto_ec/proyecto_ec/include/temporizadores.h:
