@@ -8,6 +8,10 @@
 #include "defines.h"
 #include "sprites.h"
 #include "fondos.h"
+#include "elementos.h"
+#include "gravedad.h"
+
+
 
 extern int estado;
 // Esta funcion tiene que devolver el valor de la tecla pulsada
@@ -41,14 +45,15 @@ int  TeclaPulsada() {
    // Arriba=6; Abajo=7; R=8; L=9;
    // -1 en otros casos
 }
+
+// Array que indica que teclas estan pulsadas
 int teclas_pulsadas[10] = {0};
+
 int * teclasPulsadas(){
 
     for (int i = 0; i < 10; ++i) {
         teclas_pulsadas[i] = 0;
     }
-
-
 
     if((TECLAS_DAT & 0X0001)==0){ teclas_pulsadas[A] = 1; };
     if((TECLAS_DAT & 0X0002)==0){ teclas_pulsadas[B] = 1; };
@@ -66,22 +71,39 @@ int * teclasPulsadas(){
 
 
 
+void movimientoPersonaje() {
+    int *teclas_pulsadas = teclasPulsadas();
 
+    if (teclas_pulsadas[IZDA] == 1 || teclas_pulsadas[DCHA] == 1 || teclas_pulsadas[ARRIBA] == 1 ||
+        teclas_pulsadas[ABAJO] == 1) {
+
+        if (teclas_pulsadas[DCHA] == 1 &&
+            elemento_en_pos((int) (personaje_pos_x + 16 + 0.01), (int) (personaje_pos_y + 16)) != -1) {
+            teclas_pulsadas[DCHA] = 0;
+
+        }
+        if (teclas_pulsadas[IZDA] == 1 &&
+            elemento_en_pos((int) (personaje_pos_x - 0.01), (int) (personaje_pos_y + 16)) != -1) {
+            teclas_pulsadas[IZDA] = 0;
+        }
+        moverPersonaje(teclas_pulsadas);
+    }
+}
 
 // Rutina de atencion a la interrupcion del teclado
 void IntTec() {
-	int * teclas_pulsadas = teclasPulsadas();
-	if(teclas_pulsadas[A]==1 && ESTADO==NORMAL && vida>0){	
-		/*aceleracion = 0;
-		pos_y -= 3;
-		MostrarRombo(1,(int) pos_x, (int) pos_y);*/
-		ESTADO=SALTO;
-		//inversor=-1;
-	}else if(teclas_pulsadas[B]==1 && (ESTADO==NORMAL || ESTADO==SALTO) && vida>0){
-		inversor=3;
-	}
-	
 
+    //g_personaje = true;
+    int * teclas_pulsadas = teclasPulsadas();
+
+    if(teclas_pulsadas[A]==1 && ESTADO==NORMAL){
+        ESTADO=SALTO;
+
+    }else if(teclas_pulsadas[B]==1){
+        inversor=3;
+    }
+
+    MostrarRombo(1,(int) personaje_pos_x, (int) personaje_pos_y);
 }
 
 

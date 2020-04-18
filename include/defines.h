@@ -4,6 +4,9 @@ defines.h
 
 #include <nds.h>
 #include <stdio.h>
+#include "sprites.h"
+#include "gravedad.h"
+#include "elementos_o.h"
 
 // Aquí se definen los registros del gestor de interrupciones
 #define IME		(*(vuint16*)0x04000208) //Interrupt Master Enable - Habilita o deshabilita todas las interrupciones
@@ -58,7 +61,6 @@ extern int seg;
 extern int vida;
 extern int puntuacion;
 extern int estado;
-extern double pos_x;
-extern double pos_y;
-extern double aceleracion;
+
+
 //...
