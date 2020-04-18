@@ -10,14 +10,14 @@
 // valores de los elementos : tipo,visible,colision,anchura,altura,pos_x,pos_y
 // las posiciones: pos_x e pos_y son la localizacion del bit situado abojo a la izquierda del elemento
 
-// altura 17;
-// y : 140;
+
+
 
 int elementos_array[4][7] = {
         {1,1,1,80,1,150,128} // primera plataforma desde abajo
         ,{1,1,1,75,1,15,112} // segunda plataforma desde abajo
-        ,{1,1,1,75,1,145,70}
-        ,{1,1,1,100,1,80,25}
+        ,{1,1,1,75,1,145,70} // tercer plataforma desde abajo
+        ,{1,1,1,100,1,80,25} // cuarta plataforma desde abajo
 
 };
 int num_elementos = sizeof(elementos_array) / sizeof(elementos_array[0]);

@@ -278,6 +278,7 @@ int i;
 }
 
 
+
 void moverPersonaje(int * teclas_pulsadas){
     if(teclas_pulsadas[IZDA] == 1){
         personaje_pos_x -= personaje_movimeinto_i;
@@ -287,7 +288,7 @@ void moverPersonaje(int * teclas_pulsadas){
     }
 
     if(teclas_pulsadas[ARRIBA] == 1){
-        //aceleracion = 0;
+
         personaje_pos_y -= 0.03;
     }
     /*

@@ -69,28 +69,14 @@ int * teclasPulsadas(){
     return  teclas_pulsadas;
 }
 
-int colisiona;
+
 
 void movimientoPersonaje(){
     int * teclas_pulsadas = teclasPulsadas();
-    /*
-    if (teclas_pulsadas[DCHA] == 1){
-       colisiona = elemento_en_pos((int) personaje_pos_x +16 + 0.01, personaje_pos_y);
-        //iprintf("\x1b[01;00H           %d     ",colisiona);
-
-
-        if( colisiona != -1){
-            teclas_pulsadas[DCHA] = 0;
-
-        }
-
-        movimientoPersonaje(teclas_pulsadas);
-    }
-    */
-
 
 
     if(teclas_pulsadas[IZDA] == 1  || teclas_pulsadas[DCHA] == 1 || teclas_pulsadas[ARRIBA] == 1 || teclas_pulsadas[ABAJO] == 1 ){
+
             if(teclas_pulsadas[DCHA] == 1 && elemento_en_pos((int)(personaje_pos_x +16 + 0.01),(int)(personaje_pos_y+16)) != -1){
                 teclas_pulsadas[DCHA] = 0;
 
