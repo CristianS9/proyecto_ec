@@ -91,8 +91,11 @@ void movimientoPersonaje(){
 
 
     if(teclas_pulsadas[IZDA] == 1  || teclas_pulsadas[DCHA] == 1 || teclas_pulsadas[ARRIBA] == 1 || teclas_pulsadas[ABAJO] == 1 ){
-            if(teclas_pulsadas[DCHA] == 1 && elemento_en_pos((int)(personaje_pos_x +16 + 0.01),(int)personaje_pos_y) != -1){
+            if(teclas_pulsadas[DCHA] == 1 && elemento_en_pos((int)(personaje_pos_x +16 + 0.01),(int)(personaje_pos_y+16)) != -1){
                 teclas_pulsadas[DCHA] = 0;
+
+            }   if(teclas_pulsadas[IZDA] == 1 && elemento_en_pos((int)(personaje_pos_x - 0.01),(int)(personaje_pos_y+16)) != -1){
+                teclas_pulsadas[IZDA] = 0;
             }
 
 

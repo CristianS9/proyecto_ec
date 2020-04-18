@@ -10,8 +10,17 @@
 // valores de los elementos : tipo,visible,colision,anchura,altura,pos_x,pos_y
 // las posiciones: pos_x e pos_y son la localizacion del bit situado abojo a la izquierda del elemento
 
-int elementos_array[1][7] = {{1,1,1,77,36,145,156}};
-int num_elementos = sizeof(elementos_array);
+// altura 17;
+// y : 140;
+
+int elementos_array[4][7] = {
+        {1,1,1,80,1,150,128} // primera plataforma desde abajo
+        ,{1,1,1,75,1,15,112} // segunda plataforma desde abajo
+        ,{1,1,1,75,1,145,70}
+        ,{1,1,1,100,1,80,25}
+
+};
+int num_elementos = sizeof(elementos_array) / sizeof(elementos_array[0]);
 
 int (*elementos)[7] = elementos_array;
 
@@ -20,6 +29,9 @@ int (*elementos)[7] = elementos_array;
 
 
 int elemento_en_pos(int x, int y){
+    if(x<1){
+        x= 1;
+    }
 
     int res = -1;
     for (int i = 0; i < num_elementos; ++i) {
@@ -28,7 +40,9 @@ int elemento_en_pos(int x, int y){
                 && ( y >= (elementos_array[i][6] - elementos_array[i][4])  && y <= elementos_array[i][6] )
         ){
             res = i;
+
         }
     }
+
     return res;
 }
