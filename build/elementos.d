@@ -1,6 +1,5 @@
-temporizadores.o: \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/source/temporizadores.c \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/defines.h \
+elementos.o: \
+ /home/cristian/estructura_computadores/proyecto/proyecto_ec/source/elementos.c \
  /opt/devkitpro/libnds/include/nds.h \
  /opt/devkitpro/libnds/include/nds/libversion.h \
  /opt/devkitpro/libnds/include/nds/ndstypes.h \
@@ -60,14 +59,7 @@ temporizadores.o: \
  /opt/devkitpro/libnds/include/nds/arm9/trig_lut.h \
  /opt/devkitpro/libnds/include/nds/arm9/video.h \
  /opt/devkitpro/libnds/include/nds/arm9/videoGL.h \
- /opt/devkitpro/libnds/include/nds/arm9/nand.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/sprites.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/gravedad.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/elementos_o.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/sprites.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/fondos.h
-
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/defines.h:
+ /opt/devkitpro/libnds/include/nds/arm9/nand.h
 
 /opt/devkitpro/libnds/include/nds.h:
 
@@ -188,13 +180,3 @@ temporizadores.o: \
 /opt/devkitpro/libnds/include/nds/arm9/videoGL.h:
 
 /opt/devkitpro/libnds/include/nds/arm9/nand.h:
-
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/sprites.h:
-
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/gravedad.h:
-
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/elementos_o.h:
-
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/sprites.h:
-
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/fondos.h:

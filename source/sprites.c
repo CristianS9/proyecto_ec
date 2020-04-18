@@ -13,7 +13,7 @@ dovoto y otro de Jaeden Amero
 u16* gfxRombo;
 u16* gfxRomboGrande;
 
-double personaje_pos_x = 8;
+double personaje_pos_x = 0;
 double personaje_pos_y = 150;
 double personaje_movimeinto_i = 0.01;
 double personaje_movimeinto_d = 0.01;
@@ -295,7 +295,7 @@ void moverPersonaje(int * teclas_pulsadas){
         pos_y += 0.01;
     }
      */
-    MostrarRombo(1,(int) pos_x, (int) pos_y);
+    MostrarRombo(1,(int) personaje_pos_x, (int) personaje_pos_y);
 }
 
 

@@ -8,6 +8,9 @@
 #include "defines.h"
 #include "sprites.h"
 #include "fondos.h"
+#include "elementos.h"
+#include "gravedad.h"
+
 
 
 extern int estado;
@@ -66,22 +69,45 @@ int * teclasPulsadas(){
     return  teclas_pulsadas;
 }
 
+int colisiona;
 
 void movimientoPersonaje(){
     int * teclas_pulsadas = teclasPulsadas();
+    /*
     if (teclas_pulsadas[DCHA] == 1){
+       colisiona = elemento_en_pos((int) personaje_pos_x +16 + 0.01, personaje_pos_y);
+        //iprintf("\x1b[01;00H           %d     ",colisiona);
 
+
+        if( colisiona != -1){
+            teclas_pulsadas[DCHA] = 0;
+
+        }
+
+        movimientoPersonaje(teclas_pulsadas);
     }
+    */
+
+
+
     if(teclas_pulsadas[IZDA] == 1  || teclas_pulsadas[DCHA] == 1 || teclas_pulsadas[ARRIBA] == 1 || teclas_pulsadas[ABAJO] == 1 ){
+            if(teclas_pulsadas[DCHA] == 1 && elemento_en_pos((int)(personaje_pos_x +16 + 0.01),(int)personaje_pos_y) != -1){
+                teclas_pulsadas[DCHA] = 0;
+            }
+
+
+
         moverPersonaje(teclas_pulsadas);
     }
+
+
 }
 
 // Rutina de atencion a la interrupcion del teclado
 void IntTec() {
-    pos_y -= 3;
-    MostrarRombo(1,(int) pos_x, (int) pos_y);
-
+    personaje_pos_y -= 30;
+    MostrarRombo(1,(int) personaje_pos_x, (int) personaje_pos_y);
+    g_personaje = true;
 }
 
 

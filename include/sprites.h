@@ -1,5 +1,4 @@
-extern u16* gfxBola;
-extern u16* gfxRaqueta;
+
 
 /* Inicializar la memoria de Sprites. */
 extern void initSpriteMem();
@@ -28,8 +27,8 @@ extern void BorrarRomboGrande(int x, int y);
 extern void moverPersonaje();
 
 // Variabels grlobales de sprites
-extern double pos_x;
-extern double pos_y;
+extern double personaje_pos_x;
+extern double personaje_pos_y;
 
 
 

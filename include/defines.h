@@ -4,7 +4,9 @@ defines.h
 
 #include <nds.h>
 #include <stdio.h>
-#include <funciones/gravedad.h>
+#include "sprites.h"
+#include "gravedad.h"
+#include "elementos_o.h"
 
 // Aquí se definen los registros del gestor de interrupciones
 #define IME		(*(vuint16*)0x04000208) //Interrupt Master Enable - Habilita o deshabilita todas las interrupciones

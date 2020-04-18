@@ -15,7 +15,10 @@ dovoto y otro de Jaeden Amero
 #include "rutserv.h"
 #include "teclado.h"
 #include "temporizadores.h"
-#include "funciones/gravedad.h"
+#include "gravedad.h"
+#include "elementos.h"
+
+
 
 //-----------------------------------------------------
 // Variables globales
@@ -70,19 +73,22 @@ int main() {
 
 
 
-	MostrarRombo(1,pos_x,pos_y);
+	MostrarRombo(1,personaje_pos_x,personaje_pos_y);
 
     //fondo1();
 
 	interrupciones();
 
+	//int pos = elemento_en_pos(152,145);
+
+    //iprintf("\x1b[01;00H           %d     ",pos);
 
 
 
 
 	while(1){
 	    movimientoPersonaje();
-       // gravedad(teclas_pulsadas);
+        gravedad();
 	}
 }
 /*
