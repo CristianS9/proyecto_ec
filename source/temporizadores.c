@@ -10,6 +10,7 @@
 #include "teclado.h"
 
 
+void barraVida();
 
 // Rutina de atención a la interrupción del temporizador
 void IntTemp() {

@@ -13,8 +13,8 @@ dovoto y otro de Jaeden Amero
 u16* gfxRombo;
 u16* gfxRomboGrande;
 
-double personaje_pos_x = 0;
-double personaje_pos_y = 150;
+double personaje_pos_x = 0.0;
+double personaje_pos_y = 150.0;
 double personaje_movimeinto_i = 0.01;
 double personaje_movimeinto_d = 0.01;
 
@@ -286,11 +286,12 @@ void moverPersonaje(int * teclas_pulsadas){
     if(teclas_pulsadas[DCHA] == 1){
         personaje_pos_x += personaje_movimeinto_d;
     }
-
     if(teclas_pulsadas[ARRIBA] == 1){
-
-        personaje_pos_y -= 0.03;
+        g_personaje = false;
+        personaje_pos_y -= 0.05;
     }
+
+
     /*
     if(teclas_pulsadas[ABAJO] == 1){
         pos_y += 0.01;

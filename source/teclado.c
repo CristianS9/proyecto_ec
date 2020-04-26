@@ -95,13 +95,15 @@ void IntTec() {
 
     //g_personaje = true;
     int * teclas_pulsadas = teclasPulsadas();
+    //personaje_pos_y -= 10;
 
-    if(teclas_pulsadas[A]==1 && ESTADO==NORMAL){
+    if(teclas_pulsadas[A]==1 && !g_personaje){
         ESTADO=SALTO;
-
+        //g_personaje = true;
     }else if(teclas_pulsadas[B]==1){
         inversor=3;
     }
+
 
     MostrarRombo(1,(int) personaje_pos_x, (int) personaje_pos_y);
 }

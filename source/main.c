@@ -32,8 +32,7 @@ void moverRombo();
 
 
 //double aceleracion = 0.0;
-int ESTADO;
-int seg=0;
+
 int inversor=1;
 int vida=100;
 int puntuacion=0;
@@ -72,12 +71,11 @@ int main() {
 	// en este caso time(NULL). 
 	// srand() sólo se suele activar una vez por ejecución y no devuelve ningún valor 
 	srand (time(NULL));
-	
-	ESTADO=NORMAL;
-	
+
 	iprintf("\x1b[01;17H vida: %d ",vida);
 	iprintf("\x1b[01;00H puntuacion: %d ",puntuacion);
 	iprintf("\x1b[02;00H   -------------------------");
+
 
 
 
@@ -94,7 +92,7 @@ int main() {
 	while(1){
 	    movimientoPersonaje();
         gravedad();
-
+        MostrarRombo(1,(int) personaje_pos_x, (int) personaje_pos_y);
 	}
  }
 

@@ -48,9 +48,9 @@ defines.h
 #define L		9
 
 // Asignar un nombre a cada estado
-#define NORMAL	0
+#define NORMAL 0
 #define SALTO 1
-#define PARACAIDAS 2
+
 //...
 
 
