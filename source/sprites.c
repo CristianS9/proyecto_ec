@@ -68,6 +68,8 @@ void establecerPaletaPrincipal() {
    SPRITE_PALETTE[27] = RGB15(16,26,10); // Slime verdebase
    SPRITE_PALETTE[28] = RGB15(23,29,17); // Slime verde claro
 
+
+
 }
 
 
@@ -186,7 +188,7 @@ oamSet(&oamMain, //main graphics engine context
 oamUpdate(&oamMain); 
 }
 
-void MostrarRombo (int indice, int x, int y){ 
+void MostrarRombo (int indice, int x, int y){
 oamSet(&oamMain, //main graphics engine context
 	indice,  //oam index (0 to 127)  
 	x, y,    //x and y pixle location of the sprite

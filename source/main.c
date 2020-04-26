@@ -28,7 +28,7 @@ dovoto y otro de Jaeden Amero
 int TactilTocada();//no esta en defines aun
 //extern int segs;
 void moverRombo();
-
+void tactil();
 
 
 //double aceleracion = 0.0;
@@ -93,6 +93,7 @@ int main() {
 	    movimientoPersonaje();
         gravedad();
         MostrarRombo(1,(int) personaje_pos_x, (int) personaje_pos_y);
+        tactil();
 	}
  }
 

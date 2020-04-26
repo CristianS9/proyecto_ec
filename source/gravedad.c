@@ -26,7 +26,7 @@ void gravedadPersonaje(){
 
     nueva_posicion = personaje_pos_y;
 
-    if(g_personaje && personaje_pos_y <= 150 && ESTADO == NORMAL){
+    if(g_personaje && ESTADO == NORMAL){
         aceleracion += 0.000004;
         if(!paracaidas){
             nueva_posicion += aceleracion;
@@ -51,8 +51,9 @@ void gravedadPersonaje(){
         elemento = elemento_en_pos((int)(personaje_pos_x + 16),(int)(nueva_posicion + 16));
     }
 
+
     if(ESTADO == NORMAL){
-        if( elemento != -1){
+        if( elemento != -1 && elementos[elemento][2] == 1){
             paracaidas=false;
             g_personaje = false;
             aceleracion = 0.0;
