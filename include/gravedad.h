@@ -7,6 +7,7 @@
 //variables
 extern double aceleracion;
 extern bool g_personaje;
+extern bool paracaidas;
 
 
 // Funciones

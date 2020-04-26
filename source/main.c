@@ -33,7 +33,7 @@ void moverRombo();
 
 //double aceleracion = 0.0;
 
-int inversor=1;
+
 int vida=100;
 int puntuacion=0;
 

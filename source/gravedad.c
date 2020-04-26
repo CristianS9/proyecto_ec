@@ -13,6 +13,7 @@ double aceleracion = 0.0;
 bool g_personaje = false;
 int ESTADO = NORMAL;
 int elemento;
+bool paracaidas = false;
 double nueva_posicion;
 int seg = 0;
 
@@ -26,16 +27,22 @@ void gravedadPersonaje(){
     nueva_posicion = personaje_pos_y;
 
     if(g_personaje && personaje_pos_y <= 150 && ESTADO == NORMAL){
-        nueva_posicion += 0.007001/inversor;
+        aceleracion += 0.000004;
+        if(!paracaidas){
+            nueva_posicion += aceleracion;
+        } else{
+            nueva_posicion += 0.003;
+        }
 
     } else if(ESTADO == SALTO){
-        if(seg<=30){
-            nueva_posicion -= 0.007001;
+        if(seg<=20){
+            nueva_posicion -= 0.020001;
             personaje_pos_y = nueva_posicion;
         }else{
             seg = 0;
             ESTADO = NORMAL;
         }
+
 
     }
 
@@ -46,10 +53,11 @@ void gravedadPersonaje(){
 
     if(ESTADO == NORMAL){
         if( elemento != -1){
-            inversor=1;
+            paracaidas=false;
             g_personaje = false;
+            aceleracion = 0.0;
         } else {
-            if(!g_personaje && personaje_pos_y <= 150){
+            if(!g_personaje){
                 g_personaje = true;
             }
             personaje_pos_y = nueva_posicion;
