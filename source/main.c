@@ -93,7 +93,7 @@ int main() {
 	    movimientoPersonaje();
         gravedad();
         MostrarRombo(1,(int) personaje_pos_x, (int) personaje_pos_y);
-        tactil();
+
 	}
  }
 

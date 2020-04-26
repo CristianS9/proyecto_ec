@@ -8,12 +8,14 @@
 #include <stdio.h>
 #include "fondos.h"
 #include "teclado.h"
+#include "tactil.h"
 
 
 void barraVida();
 
 // Rutina de atención a la interrupción del temporizador
 void IntTemp() {
+    tactil();
 	static int tic=0;
 	
 	if(tic==20){

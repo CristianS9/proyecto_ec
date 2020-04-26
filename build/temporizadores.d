@@ -66,7 +66,8 @@ temporizadores.o: \
  /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/elementos_o.h \
  /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/sprites.h \
  /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/fondos.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/teclado.h
+ /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/teclado.h \
+ /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/tactil.h
 
 /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/defines.h:
 
@@ -201,3 +202,5 @@ temporizadores.o: \
 /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/fondos.h:
 
 /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/teclado.h:
+
+/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/tactil.h:

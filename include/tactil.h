@@ -6,3 +6,5 @@
 #define PROYECTO_EC_TACTIL_H
 
 #endif //PROYECTO_EC_TACTIL_H
+
+extern void tactil();
