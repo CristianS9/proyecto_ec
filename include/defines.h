@@ -4,6 +4,9 @@ defines.h
 
 #include <nds.h>
 #include <stdio.h>
+#include "sprites.h"
+#include "gravedad.h"
+#include "elementos_o.h"
 
 // Aquí se definen los registros del gestor de interrupciones
 #define IME		(*(vuint16*)0x04000208) //Interrupt Master Enable - Habilita o deshabilita todas las interrupciones
@@ -45,16 +48,19 @@ defines.h
 #define L		9
 
 // Asignar un nombre a cada estado
-#define ESPERA	0
-#define CERRADA 1
-#define ABIERTA 2
+#define NORMAL 0
+#define SALTO 1
+
 //...
 
 
 // Variables globales
-
-extern int seg;
-extern int tseg;
+extern int ESTADO;
+extern int antp;
+extern int vida;
+extern int puntuacion;
 extern int estado;
+extern int apag;
+
 
 //...

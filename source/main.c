@@ -15,21 +15,35 @@ dovoto y otro de Jaeden Amero
 #include "rutserv.h"
 #include "teclado.h"
 #include "temporizadores.h"
+#include "gravedad.h"
+#include "elementos.h"
+
+
 
 //-----------------------------------------------------
 // Variables globales
 //-----------------------------------------------------
 
-
+int antp;
 int TactilTocada();//no esta en defines aun
 //extern int segs;
+void moverRombo();
+void tactil();
+
+
+//double aceleracion = 0.0;
+
+
+int vida=100;
+int puntuacion=0;
+int apag=0;
 
 
 int main() {
 	
 
 	// Variables del main
-	touchPosition pos_pantalla;
+
 
 	//  Poner en marcha el motor gráfico 2D.
     	powerOn(POWER_ALL_2D);
@@ -57,22 +71,42 @@ int main() {
 	// en este caso time(NULL). 
 	// srand() sólo se suele activar una vez por ejecución y no devuelve ningún valor 
 	srand (time(NULL));
-	
-//	int tecla;  
-    
-// ...
-	MostrarRombo(1,8,8);
-//	MostrarPuertaAbierta();
-	
+
+	iprintf("\x1b[01;17H vida: %d ",vida);
+	iprintf("\x1b[01;00H puntuacion: %d ",puntuacion);
+	iprintf("\x1b[02;00H   -------------------------");
+	iprintf("\x1b[03;00H   -------------------------");
+	iprintf("\x1b[04;00H   ------PROYECTO EC--------");
+	iprintf("\x1b[05;00H   IKER P, JON M, CRISTIAN S");
+	iprintf("\x1b[06;00H   -------------------------");
+	iprintf("\x1b[07;00H   -----SLIME HERO GAME-----");
+	iprintf("\x1b[08;00H   -------------------------");
+
+
+
+
+
+	MostrarRombo(1,personaje_pos_x,personaje_pos_y);
+
+
+
 	interrupciones();
-	
-	
-	estado=ESPERA;
-	while(1)
-	{	
+
+
+
+	while(apag==0){
+		if(vida>0){
+		    	movimientoPersonaje();
+	  	      	gravedad();
+		}else{
+			BorrarRombo(1,(int)personaje_pos_x,(int)personaje_pos_y);
+		}
+		tactil();
+        	//MostrarRombo(1,(int) personaje_pos_x, (int) personaje_pos_y);
 
 	}
-}
+ }
+
 /*
 TactilTocada(){
 	int r=0;

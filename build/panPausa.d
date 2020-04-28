@@ -1,0 +1,1 @@
+panPausa.o: panPausa.s

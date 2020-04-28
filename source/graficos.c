@@ -12,7 +12,7 @@ dovoto y otro de Jaeden Amero
 void initVideo() {
     /*  Mapear la memoria VRAM para mostrar gráficos en las dos pantallas. */
 
-    vramSetMainBanks(VRAM_A_MAIN_BG_0x06000000,
+    vramSetPrimaryBanks(VRAM_A_MAIN_BG_0x06000000,
                      VRAM_B_MAIN_BG_0x06020000,
                      VRAM_C_SUB_BG_0x06200000,
                      VRAM_E_LCD);

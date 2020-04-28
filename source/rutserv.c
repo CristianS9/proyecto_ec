@@ -47,7 +47,7 @@ void DefinirVectorInterrupciones() { // Rutinas de atención
 
   // Rutina de Atención al Teclado
     irqSet(IRQ_KEYS, IntTec);
-    //irqEnable(IRQ_KEYS); para habilitar los IE especificos
+    //irqEnable(IRQ_KEYS); //para habilitar los IE especificos
   // Rutinas de Atención a los Temporizadores
     irqSet(IRQ_TIMER0, IntTemp);
 }

@@ -4,9 +4,10 @@ teclado.h
 
 extern int tecla; // variable para guardar el valor de la tecla pulsada
 
-//Esta función tiene que devolver el valor de la tecla pulsada
+//Esta funciï¿½n tiene que devolver el valor de la tecla pulsada
 extern int TeclaPulsada();
+extern int * teclasPulsadas();
 
-//Rutina de atención a la interrupción del teclado
+extern void movimientoPersonaje();
+//Rutina de atenciï¿½n a la interrupciï¿½n del teclado
 extern void IntTec();
-
