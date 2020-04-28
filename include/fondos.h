@@ -21,6 +21,8 @@ extern void nether3();
 extern void nether1Muerte();
 extern void nether2Muerte();
 extern void nether3Muerte();
+extern void off();
+extern void panPausa();
 
 
 /* Definir el sistema de vídeo */

@@ -1,9 +1,9 @@
 
-//{{BLOCK(fondo3)
+//{{BLOCK(panPausa)
 
 //======================================================================
 //
-//	fondo3, 255x191@16, 
+//	panPausa, 255x191@16, 
 //	Alphabit on.
 //	+ bitmap not compressed
 //	Total size: 97792 = 97792
@@ -14,12 +14,12 @@
 //
 //======================================================================
 
-#ifndef GRIT_FONDO3_H
-#define GRIT_FONDO3_H
+#ifndef GRIT_PANPAUSA_H
+#define GRIT_PANPAUSA_H
 
-#define fondo3BitmapLen 97792
-extern const unsigned int fondo3Bitmap[24448];
+#define panPausaBitmapLen 97792
+extern const unsigned int panPausaBitmap[24448];
 
-#endif // GRIT_FONDO3_H
+#endif // GRIT_PANPAUSA_H
 
-//}}BLOCK(fondo3)
+//}}BLOCK(panPausa)

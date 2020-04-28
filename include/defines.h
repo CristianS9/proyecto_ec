@@ -56,10 +56,11 @@ defines.h
 
 // Variables globales
 extern int ESTADO;
-extern int seg;
+extern int antp;
 extern int vida;
 extern int puntuacion;
 extern int estado;
+extern int apag;
 
 
 //...

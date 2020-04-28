@@ -18,22 +18,23 @@
  * 12 -- boton reinicio
  * 13 -- boton nivel
  * 14 -- boton apagar
- *
+ * 15 -- boton reanudar
  */
 
 // suelo base 167
 
-int elementos_array[9][7] = {
+int elementos_array[10][7] = {
          {1,1,1,255,1,0,167} // Suelo
         ,{1,1,1,80,1,150,128} // primera plataforma desde abajo
         ,{1,1,1,75,1,15,112} // segunda plataforma desde abajo
-        ,{1,1,1,75,1,145,70} // tercer plataforma desde abajo
+        ,{1,1,1,90,1,140,70} // tercer plataforma desde abajo
         ,{1,1,1,100,1,80,25} // cuarta plataforma desde abajo
 
         ,{11,1,0,40,16,8,188} // Boton pausa
         ,{12,1,0,40,16,68,188} // Boton reinicio
         ,{13,1,0,40,16,134,188} // Boton nivel
         ,{14,1,0,40,16,207,188} // Boton apagar
+	,{15,1,0,55,52,95,88} //boton reanudar
 
 
 

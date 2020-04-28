@@ -15,7 +15,6 @@ void barraVida();
 
 // Rutina de atención a la interrupción del temporizador
 void IntTemp() {
-    tactil();
 	static int tic=0;
 	
 	if(tic==20){
@@ -47,10 +46,10 @@ void IntTemp() {
 		}
        		tic = 0;
 	}
-	if(ESTADO==SALTO){
+	/*if(ESTADO==SALTO){
 		seg++;
 
-	}
+	}*/
 
 	tic++;
 }

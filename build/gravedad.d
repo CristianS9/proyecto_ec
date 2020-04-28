@@ -1,9 +1,8 @@
-gravedad.o: \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/source/gravedad.c \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/gravedad.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/elementos.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/sprites.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/defines.h \
+gravedad.o: /home/iker/proyecto_ec/source/gravedad.c \
+ /home/iker/proyecto_ec/include/gravedad.h \
+ /home/iker/proyecto_ec/include/elementos.h \
+ /home/iker/proyecto_ec/include/sprites.h \
+ /home/iker/proyecto_ec/include/defines.h \
  /opt/devkitpro/libnds/include/nds.h \
  /opt/devkitpro/libnds/include/nds/libversion.h \
  /opt/devkitpro/libnds/include/nds/ndstypes.h \
@@ -64,17 +63,17 @@ gravedad.o: \
  /opt/devkitpro/libnds/include/nds/arm9/video.h \
  /opt/devkitpro/libnds/include/nds/arm9/videoGL.h \
  /opt/devkitpro/libnds/include/nds/arm9/nand.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/sprites.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/gravedad.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/elementos_o.h
+ /home/iker/proyecto_ec/include/sprites.h \
+ /home/iker/proyecto_ec/include/gravedad.h \
+ /home/iker/proyecto_ec/include/elementos_o.h
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/gravedad.h:
+/home/iker/proyecto_ec/include/gravedad.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/elementos.h:
+/home/iker/proyecto_ec/include/elementos.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/sprites.h:
+/home/iker/proyecto_ec/include/sprites.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/defines.h:
+/home/iker/proyecto_ec/include/defines.h:
 
 /opt/devkitpro/libnds/include/nds.h:
 
@@ -196,8 +195,8 @@ gravedad.o: \
 
 /opt/devkitpro/libnds/include/nds/arm9/nand.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/sprites.h:
+/home/iker/proyecto_ec/include/sprites.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/gravedad.h:
+/home/iker/proyecto_ec/include/gravedad.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/elementos_o.h:
+/home/iker/proyecto_ec/include/elementos_o.h:

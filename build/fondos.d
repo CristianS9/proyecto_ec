@@ -1,5 +1,4 @@
-fondos.o: \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/source/fondos.c \
+fondos.o: /home/iker/proyecto_ec/source/fondos.c \
  /opt/devkitpro/libnds/include/nds.h \
  /opt/devkitpro/libnds/include/nds/libversion.h \
  /opt/devkitpro/libnds/include/nds/ndstypes.h \
@@ -60,25 +59,27 @@ fondos.o: \
  /opt/devkitpro/libnds/include/nds/arm9/video.h \
  /opt/devkitpro/libnds/include/nds/arm9/videoGL.h \
  /opt/devkitpro/libnds/include/nds/arm9/nand.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/fondos.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/build/fondo1.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/build/fondo2.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/build/fondo3.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/build/fondoMuerte.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/build/fondo2Muerte.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/build/fondo3Muerte.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/build/Cielo.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/build/Cielo2.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/build/Cielo3.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/build/Cielomuerte.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/build/Cielo2muerte.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/build/cielo3muerte.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/build/nether.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/build/nether2.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/build/nether3.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/build/nethermuerte.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/build/nether2muerte.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/build/nether3muerte.h
+ /home/iker/proyecto_ec/include/fondos.h \
+ /home/iker/proyecto_ec/build/fondo1.h \
+ /home/iker/proyecto_ec/build/fondo2.h \
+ /home/iker/proyecto_ec/build/fondo3.h \
+ /home/iker/proyecto_ec/build/fondoMuerte.h \
+ /home/iker/proyecto_ec/build/fondo2Muerte.h \
+ /home/iker/proyecto_ec/build/fondo3Muerte.h \
+ /home/iker/proyecto_ec/build/Cielo.h \
+ /home/iker/proyecto_ec/build/Cielo2.h \
+ /home/iker/proyecto_ec/build/Cielo3.h \
+ /home/iker/proyecto_ec/build/Cielomuerte.h \
+ /home/iker/proyecto_ec/build/Cielo2muerte.h \
+ /home/iker/proyecto_ec/build/cielo3muerte.h \
+ /home/iker/proyecto_ec/build/nether.h \
+ /home/iker/proyecto_ec/build/nether2.h \
+ /home/iker/proyecto_ec/build/nether3.h \
+ /home/iker/proyecto_ec/build/nethermuerte.h \
+ /home/iker/proyecto_ec/build/nether2muerte.h \
+ /home/iker/proyecto_ec/build/nether3muerte.h \
+ /home/iker/proyecto_ec/build/off.h \
+ /home/iker/proyecto_ec/build/panPausa.h
 
 /opt/devkitpro/libnds/include/nds.h:
 
@@ -200,40 +201,44 @@ fondos.o: \
 
 /opt/devkitpro/libnds/include/nds/arm9/nand.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/fondos.h:
+/home/iker/proyecto_ec/include/fondos.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/build/fondo1.h:
+/home/iker/proyecto_ec/build/fondo1.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/build/fondo2.h:
+/home/iker/proyecto_ec/build/fondo2.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/build/fondo3.h:
+/home/iker/proyecto_ec/build/fondo3.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/build/fondoMuerte.h:
+/home/iker/proyecto_ec/build/fondoMuerte.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/build/fondo2Muerte.h:
+/home/iker/proyecto_ec/build/fondo2Muerte.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/build/fondo3Muerte.h:
+/home/iker/proyecto_ec/build/fondo3Muerte.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/build/Cielo.h:
+/home/iker/proyecto_ec/build/Cielo.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/build/Cielo2.h:
+/home/iker/proyecto_ec/build/Cielo2.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/build/Cielo3.h:
+/home/iker/proyecto_ec/build/Cielo3.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/build/Cielomuerte.h:
+/home/iker/proyecto_ec/build/Cielomuerte.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/build/Cielo2muerte.h:
+/home/iker/proyecto_ec/build/Cielo2muerte.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/build/cielo3muerte.h:
+/home/iker/proyecto_ec/build/cielo3muerte.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/build/nether.h:
+/home/iker/proyecto_ec/build/nether.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/build/nether2.h:
+/home/iker/proyecto_ec/build/nether2.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/build/nether3.h:
+/home/iker/proyecto_ec/build/nether3.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/build/nethermuerte.h:
+/home/iker/proyecto_ec/build/nethermuerte.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/build/nether2muerte.h:
+/home/iker/proyecto_ec/build/nether2muerte.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/build/nether3muerte.h:
+/home/iker/proyecto_ec/build/nether3muerte.h:
+
+/home/iker/proyecto_ec/build/off.h:
+
+/home/iker/proyecto_ec/build/panPausa.h:

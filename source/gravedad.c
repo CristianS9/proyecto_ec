@@ -35,11 +35,13 @@ void gravedadPersonaje(){
         }
 
     } else if(ESTADO == SALTO){
-        if(seg<=20){
-            nueva_posicion -= 0.020001;
-            personaje_pos_y = nueva_posicion;
+        if((antp-(int)personaje_pos_y)<68){
+
+            		nueva_posicion -= 0.015001;
+            		personaje_pos_y = nueva_posicion;
+
         }else{
-            seg = 0;
+            //seg = 0;
             ESTADO = NORMAL;
         }
 

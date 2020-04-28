@@ -30,6 +30,8 @@ dovoto y otro de Jaeden Amero
 #include "nethermuerte.h"
 #include "nether2muerte.h"
 #include "nether3muerte.h"
+#include "off.h"
+#include "panPausa.h"
 
 
 
@@ -242,6 +244,18 @@ void over1() {
                      nether3muerteBitmap, // Variable generada automáticamente
                      (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
                      nether3muerteBitmapLen); // Longitud (en bytes) generada automáticamente
+}void off() {
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     offBitmap, // Variable generada automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
+                     offBitmapLen); // Longitud (en bytes) generada automáticamente
+
+}void panPausa() {
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     panPausaBitmap, // Variable generada automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo 3 principal
+                     panPausaBitmapLen); // Longitud (en bytes) generada automáticamente
+
 }
 
 

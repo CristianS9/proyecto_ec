@@ -97,8 +97,9 @@ void IntTec() {
     int * teclas_pulsadas = teclasPulsadas();
     //personaje_pos_y -= 10;
 
-    if(teclas_pulsadas[A]==1 && !g_personaje){
+    if(teclas_pulsadas[A]==1 && aceleracion==0.0 && ESTADO==NORMAL){
         ESTADO=SALTO;
+	antp=(int)personaje_pos_y;
         //g_personaje = true;
     }else if(teclas_pulsadas[B]==1){
         aceleracion = 0.0;

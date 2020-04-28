@@ -275,10 +275,10 @@ void moverPersonaje(int * teclas_pulsadas){
         }
         personaje_pos_x = nueva_pos;
     }
-    if(teclas_pulsadas[ARRIBA] == 1){
+    /*if(teclas_pulsadas[ARRIBA] == 1){
         g_personaje = false;
         personaje_pos_y -= 0.05;
-    }
+    }/*
 
 
     /*

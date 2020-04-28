@@ -1,5 +1,4 @@
-elementos.o: \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/source/elementos.c \
+elementos.o: /home/iker/proyecto_ec/source/elementos.c \
  /opt/devkitpro/libnds/include/nds.h \
  /opt/devkitpro/libnds/include/nds/libversion.h \
  /opt/devkitpro/libnds/include/nds/ndstypes.h \

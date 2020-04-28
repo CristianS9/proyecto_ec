@@ -1,9 +1,9 @@
 
-//{{BLOCK(fondo3)
+//{{BLOCK(off)
 
 //======================================================================
 //
-//	fondo3, 255x191@16, 
+//	off, 255x191@16, 
 //	Alphabit on.
 //	+ bitmap not compressed
 //	Total size: 97792 = 97792
@@ -14,12 +14,12 @@
 //
 //======================================================================
 
-#ifndef GRIT_FONDO3_H
-#define GRIT_FONDO3_H
+#ifndef GRIT_OFF_H
+#define GRIT_OFF_H
 
-#define fondo3BitmapLen 97792
-extern const unsigned int fondo3Bitmap[24448];
+#define offBitmapLen 97792
+extern const unsigned int offBitmap[24448];
 
-#endif // GRIT_FONDO3_H
+#endif // GRIT_OFF_H
 
-//}}BLOCK(fondo3)
+//}}BLOCK(off)

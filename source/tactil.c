@@ -31,7 +31,7 @@ void tactil(){
             reiniciar();
             break;
         case 13:
-
+	    nivel();
             break;
         case 14:
             apagar();
@@ -44,18 +44,26 @@ void tactil(){
  void pausa(){
 
     int elemento_pausa = -1;
-    nether2();
+     panPausa();
      InhibirInterrupciones();
      pos.px= 0;
      pos.py = 0;
+     BorrarRombo(1,personaje_pos_x,personaje_pos_y);
 
-     while(elemento_pausa != 11){
+     while(elemento_pausa != 15){
         touchRead(&pos);
         elemento_pausa = elementos[elemento_en_pos(pos.px,pos.py)][0];
-
+	
     }
+     MostrarRombo(1,personaje_pos_x,personaje_pos_y);
      HabilitarInterrupciones();
 
+}
+void apagar(){
+	off();
+	iprintf("\x1b[01;00H                            ");
+	iprintf("\x1b[02;00H                            ");
+	apag=1;
 }
 
 void reiniciar(){
@@ -67,9 +75,6 @@ void reiniciar(){
 }
 
 void nivel(){
-
+	iprintf("\x1b[10;00H   No hay mas niveles aun");
 }
 
-void apagar(){
-    iprintf("\x1b[05;11H vida: apagado ");
-}

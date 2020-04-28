@@ -24,7 +24,7 @@ dovoto y otro de Jaeden Amero
 // Variables globales
 //-----------------------------------------------------
 
-
+int antp;
 int TactilTocada();//no esta en defines aun
 //extern int segs;
 void moverRombo();
@@ -36,7 +36,7 @@ void tactil();
 
 int vida=100;
 int puntuacion=0;
-
+int apag=0;
 
 
 int main() {
@@ -75,7 +75,12 @@ int main() {
 	iprintf("\x1b[01;17H vida: %d ",vida);
 	iprintf("\x1b[01;00H puntuacion: %d ",puntuacion);
 	iprintf("\x1b[02;00H   -------------------------");
-
+	iprintf("\x1b[03;00H   -------------------------");
+	iprintf("\x1b[04;00H   ------PROYECTO EC--------");
+	iprintf("\x1b[05;00H   IKER P, JON M, CRISTIAN S");
+	iprintf("\x1b[06;00H   -------------------------");
+	iprintf("\x1b[07;00H   -----SLIME HERO GAME-----");
+	iprintf("\x1b[08;00H   -------------------------");
 
 
 
@@ -89,10 +94,15 @@ int main() {
 
 
 
-	while(1){
-	    movimientoPersonaje();
-        gravedad();
-        MostrarRombo(1,(int) personaje_pos_x, (int) personaje_pos_y);
+	while(apag==0){
+		if(vida>0){
+		    	movimientoPersonaje();
+	  	      	gravedad();
+		}else{
+			BorrarRombo(1,(int)personaje_pos_x,(int)personaje_pos_y);
+		}
+		tactil();
+        	//MostrarRombo(1,(int) personaje_pos_x, (int) personaje_pos_y);
 
 	}
  }

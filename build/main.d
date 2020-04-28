@@ -1,5 +1,4 @@
-main.o: \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/source/main.c \
+main.o: /home/iker/proyecto_ec/source/main.c \
  /opt/devkitpro/libnds/include/nds.h \
  /opt/devkitpro/libnds/include/nds/libversion.h \
  /opt/devkitpro/libnds/include/nds/ndstypes.h \
@@ -60,17 +59,17 @@ main.o: \
  /opt/devkitpro/libnds/include/nds/arm9/video.h \
  /opt/devkitpro/libnds/include/nds/arm9/videoGL.h \
  /opt/devkitpro/libnds/include/nds/arm9/nand.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/fondos.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/sprites.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/defines.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/sprites.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/gravedad.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/elementos_o.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/rutserv.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/teclado.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/temporizadores.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/gravedad.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/elementos.h
+ /home/iker/proyecto_ec/include/fondos.h \
+ /home/iker/proyecto_ec/include/sprites.h \
+ /home/iker/proyecto_ec/include/defines.h \
+ /home/iker/proyecto_ec/include/sprites.h \
+ /home/iker/proyecto_ec/include/gravedad.h \
+ /home/iker/proyecto_ec/include/elementos_o.h \
+ /home/iker/proyecto_ec/include/rutserv.h \
+ /home/iker/proyecto_ec/include/teclado.h \
+ /home/iker/proyecto_ec/include/temporizadores.h \
+ /home/iker/proyecto_ec/include/gravedad.h \
+ /home/iker/proyecto_ec/include/elementos.h
 
 /opt/devkitpro/libnds/include/nds.h:
 
@@ -192,24 +191,24 @@ main.o: \
 
 /opt/devkitpro/libnds/include/nds/arm9/nand.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/fondos.h:
+/home/iker/proyecto_ec/include/fondos.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/sprites.h:
+/home/iker/proyecto_ec/include/sprites.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/defines.h:
+/home/iker/proyecto_ec/include/defines.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/sprites.h:
+/home/iker/proyecto_ec/include/sprites.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/gravedad.h:
+/home/iker/proyecto_ec/include/gravedad.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/elementos_o.h:
+/home/iker/proyecto_ec/include/elementos_o.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/rutserv.h:
+/home/iker/proyecto_ec/include/rutserv.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/teclado.h:
+/home/iker/proyecto_ec/include/teclado.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/temporizadores.h:
+/home/iker/proyecto_ec/include/temporizadores.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/gravedad.h:
+/home/iker/proyecto_ec/include/gravedad.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/elementos.h:
+/home/iker/proyecto_ec/include/elementos.h:

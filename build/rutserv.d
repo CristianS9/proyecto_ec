@@ -1,5 +1,4 @@
-rutserv.o: \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/source/rutserv.c \
+rutserv.o: /home/iker/proyecto_ec/source/rutserv.c \
  /opt/devkitpro/libnds/include/nds.h \
  /opt/devkitpro/libnds/include/nds/libversion.h \
  /opt/devkitpro/libnds/include/nds/ndstypes.h \
@@ -60,12 +59,12 @@ rutserv.o: \
  /opt/devkitpro/libnds/include/nds/arm9/video.h \
  /opt/devkitpro/libnds/include/nds/arm9/videoGL.h \
  /opt/devkitpro/libnds/include/nds/arm9/nand.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/teclado.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/defines.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/sprites.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/gravedad.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/elementos_o.h \
- /home/cristian/estructura_computadores/proyecto/proyecto_ec/include/temporizadores.h
+ /home/iker/proyecto_ec/include/teclado.h \
+ /home/iker/proyecto_ec/include/defines.h \
+ /home/iker/proyecto_ec/include/sprites.h \
+ /home/iker/proyecto_ec/include/gravedad.h \
+ /home/iker/proyecto_ec/include/elementos_o.h \
+ /home/iker/proyecto_ec/include/temporizadores.h
 
 /opt/devkitpro/libnds/include/nds.h:
 
@@ -187,14 +186,14 @@ rutserv.o: \
 
 /opt/devkitpro/libnds/include/nds/arm9/nand.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/teclado.h:
+/home/iker/proyecto_ec/include/teclado.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/defines.h:
+/home/iker/proyecto_ec/include/defines.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/sprites.h:
+/home/iker/proyecto_ec/include/sprites.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/gravedad.h:
+/home/iker/proyecto_ec/include/gravedad.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/elementos_o.h:
+/home/iker/proyecto_ec/include/elementos_o.h:
 
-/home/cristian/estructura_computadores/proyecto/proyecto_ec/include/temporizadores.h:
+/home/iker/proyecto_ec/include/temporizadores.h:
