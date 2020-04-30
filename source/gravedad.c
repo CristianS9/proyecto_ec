@@ -48,9 +48,9 @@ void gravedadPersonaje(){
 
     }
 
-    elemento = elemento_en_pos((int)(personaje_pos_x),(int)(nueva_posicion + 16));
+    elemento = elemento_en_pos((int)(personaje_pos_x),(int)(nueva_posicion + 16),1,1);
     if(elemento == -1){
-        elemento = elemento_en_pos((int)(personaje_pos_x + 16),(int)(nueva_posicion + 16));
+        elemento = elemento_en_pos((int)(personaje_pos_x + 16),(int)(nueva_posicion + 16),1,1);
     }
 
 

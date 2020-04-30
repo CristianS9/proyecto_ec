@@ -22,7 +22,7 @@ void nivel();
 
 void tactil(){
     touchRead(&pos);
-    elemento = elementos[elemento_en_pos(pos.px,pos.py)][0];
+    elemento = elementos[elemento_en_pos(pos.px,pos.py,11,14)][0];
     switch (elemento){
         case 11:
             pausa();
@@ -52,7 +52,7 @@ void tactil(){
 
      while(elemento_pausa != 15){
         touchRead(&pos);
-        elemento_pausa = elementos[elemento_en_pos(pos.px,pos.py)][0];
+        elemento_pausa = elementos[elemento_en_pos(pos.px,pos.py,15,15)][0];
 	
     }
      MostrarRombo(1,personaje_pos_x,personaje_pos_y);

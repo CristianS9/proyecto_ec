@@ -46,15 +46,14 @@ int (*elementos)[7] = elementos_array;
 
 
 
-int elemento_en_pos(int x, int y){
+int elemento_en_pos(int x, int y,int tipo1, int tipo2){
     if(x<1){
         x= 1;
     }
 
     int res = -1;
     for (int i = 0; i < num_elementos; ++i) {
-        if(
-                ( x >= elementos_array[i][5] && x <= (elementos_array[i][5] +  elementos_array[i][3]) )
+        if((tipo1<=elementos_array[i][0] && tipo2>=elementos_array[i][0]) && ( x >= elementos_array[i][5] && x <= (elementos_array[i][5] +  elementos_array[i][3]) )
                 && ( y >= (elementos_array[i][6] - elementos_array[i][4])  && y <= elementos_array[i][6] )
         ){
             res = i;
