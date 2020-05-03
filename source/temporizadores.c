@@ -9,6 +9,7 @@
 #include "fondos.h"
 #include "teclado.h"
 #include "tactil.h"
+#include "enemigos.h"
 
 
 void barraVida();
@@ -16,7 +17,27 @@ void barraVida();
 // Rutina de atención a la interrupción del temporizador
 void IntTemp() {
 	static int tic=0;
-	
+	if(enemCounter>0){
+		enemCounter++;
+		if(enemCounter==30){
+			spawn++;
+		}
+	}
+	if(restavida>0){
+		restavida++;
+		if(restavida==3){
+			vida -=25;
+			restavida=0;
+		}
+	}
+	if(tempK>0){
+		tempK++;
+		if(tempK==5){
+			tempK=0;
+			killer=1;
+		}
+	}
+	enemMov();
 	if(tic==20){
 		if(vida>0){
       			over1();
@@ -35,14 +56,16 @@ void IntTemp() {
 		}else{
 			over3Muerte();
 		}
-		iprintf("\x1b[01;17H vida: %d ",vida);
 		barraVida();
 		if(vida>0){
+		iprintf("\x1b[01;17H vida: %d ",vida);
 			vida--;
+		}else{
+		iprintf("\x1b[01;17H vida: 0   ");
 		}
 		iprintf("\x1b[01;00H puntuacion: %d ",puntuacion);
 		if(vida>0){
-			puntuacion++;
+			puntuacion += 10;
 		}
        		tic = 0;
 	}
