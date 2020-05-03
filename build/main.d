@@ -69,6 +69,7 @@ main.o: /home/iker/proyecto_ec/source/main.c \
  /home/iker/proyecto_ec/include/teclado.h \
  /home/iker/proyecto_ec/include/temporizadores.h \
  /home/iker/proyecto_ec/include/gravedad.h \
+ /home/iker/proyecto_ec/include/enemigos.h \
  /home/iker/proyecto_ec/include/elementos.h
 
 /opt/devkitpro/libnds/include/nds.h:
@@ -210,5 +211,7 @@ main.o: /home/iker/proyecto_ec/source/main.c \
 /home/iker/proyecto_ec/include/temporizadores.h:
 
 /home/iker/proyecto_ec/include/gravedad.h:
+
+/home/iker/proyecto_ec/include/enemigos.h:
 
 /home/iker/proyecto_ec/include/elementos.h:

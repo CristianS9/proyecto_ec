@@ -16,6 +16,7 @@ dovoto y otro de Jaeden Amero
 #include "teclado.h"
 #include "temporizadores.h"
 #include "gravedad.h"
+#include "enemigos.h"
 #include "elementos.h"
 
 
@@ -33,11 +34,17 @@ void tactil();
 
 //double aceleracion = 0.0;
 
-
 int vida=100;
 int puntuacion=0;
 int apag=0;
-
+int enemCounter=0;
+int Ecolision=0;
+int dif;
+int spawn=2;
+int restavida=0;
+int rein=0;
+int killer=1;
+int tempK=0;
 
 int main() {
 	
@@ -75,12 +82,12 @@ int main() {
 	iprintf("\x1b[01;17H vida: %d ",vida);
 	iprintf("\x1b[01;00H puntuacion: %d ",puntuacion);
 	iprintf("\x1b[02;00H   -------------------------");
-	iprintf("\x1b[03;00H   -------------------------");
-	iprintf("\x1b[04;00H   ------PROYECTO EC--------");
-	iprintf("\x1b[05;00H   IKER P, JON M, CRISTIAN S");
-	iprintf("\x1b[06;00H   -------------------------");
-	iprintf("\x1b[07;00H   -----SLIME HERO GAME-----");
-	iprintf("\x1b[08;00H   -------------------------");
+	iprintf("\x1b[07;00H   -------------------------");
+	iprintf("\x1b[08;00H   ------PROYECTO EC--------");
+	iprintf("\x1b[09;00H   IKER P, JON M, CRISTIAN S");
+	iprintf("\x1b[10;00H   -------------------------");
+	iprintf("\x1b[11;00H   -----SLIME HERO GAME-----");
+	iprintf("\x1b[12;00H   -------------------------");
 
 
 
@@ -96,6 +103,7 @@ int main() {
 
 	while(apag==0){
 		if(vida>0){
+			updateLife();
 		    	movimientoPersonaje();
 	  	      	gravedad();
 		}else{

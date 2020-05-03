@@ -11,7 +11,8 @@ dovoto y otro de Jaeden Amero
 #include "defines.h"
 
 u16* gfxRombo;
-u16* gfxRomboGrande;
+
+u16* gfxEnem;
 
 double personaje_pos_x = 0.0;
 double personaje_pos_y = 145.0;
@@ -27,8 +28,8 @@ void initSpriteMem() {
 	oamInit(&oamSub, SpriteMapping_1D_32, false);
 
 	gfxRombo =    oamAllocateGfx(&oamMain, SpriteSize_16x16, SpriteColorFormat_256Color);
-	gfxRomboGrande = oamAllocateGfx(&oamMain, SpriteSize_16x16, SpriteColorFormat_256Color);
-
+	
+	gfxEnem = oamAllocateGfx(&oamMain, SpriteSize_16x16, SpriteColorFormat_256Color);
 }
 
 
@@ -65,10 +66,13 @@ void establecerPaletaPrincipal() {
 
    SPRITE_PALETTE[25] = RGB15(2,11,4); // Slime verde oscuro
    SPRITE_PALETTE[26] = RGB15(6,21,5); // Slime verde medio oscuro
-   SPRITE_PALETTE[27] = RGB15(16,26,10); // Slime verdebase
+   SPRITE_PALETTE[27] = RGB15(16,26,10); // Slime verde base
    SPRITE_PALETTE[28] = RGB15(23,29,17); // Slime verde claro
-
-
+   
+   SPRITE_PALETTE[29] = RGB15(10,0,0); //Slime rojo oscuro
+   SPRITE_PALETTE[30] = RGB15(24,3,3); //Slime rojo medio oscuro
+   SPRITE_PALETTE[31] = RGB15(30,1,1); //Slime rojo base
+   SPRITE_PALETTE[32] = RGB15(30,10,10); //Slime rojo claro
 
 }
 
@@ -85,8 +89,7 @@ void establecerPaletaPrincipal() {
 u8 Rombo[256] = 
 {
 
-
-        0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0,25,25,0, 0, 0, 0,25,26,27,27,
@@ -107,66 +110,37 @@ u8 Rombo[256] =
         27,27,27,27,26,25,25, 0,25,25,25,25,25,25, 0, 0,
 
 
-/*
-	 0, 0, 0, 0, 0, 0, 0, 0,   0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 0, 0, 0,   0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 0, 0, 0,   0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 0, 0, 0,   0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 0, 0, 0,   0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 0, 0, 0,   0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 0,25,25,  25,25, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0,25,26,27,27,  27,27,26,25, 0, 0, 0, 0,
+};
+u8 Enem[256] = 
+{
 
-	 0, 0, 0,25,27,28,28,28,  28,28,28,27,25, 0, 0, 0,
-	 0, 0,25,27,28,28,28,28,  28,25,28,25,27,25, 0, 0,
-	 0, 0,26,27,27,27,28,28,  28,26,28,26,27,26, 0, 0,
-	 0,25,27,27,27,27,27,27,  27,26,27,26,27,27,25, 0,
-	 0,25,27,27,27,27,27,27,  27,27,27,27,27,27,25, 0,
-	 0,25,26,27,27,27,27,27,  27,27,27,27,27,26,25, 0,
-	 0,25,25,26,26,27,27,27,  27,27,27,27,26,25,25, 0,
-	 0, 0,25,25,25,25,25,25,  25,25,25,25,25,25, 0, 0,
 
-*/
+        0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0,29,29,0, 0, 0, 0,29,30,31,31,
+
+        0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0,
+        29,29, 0, 0, 0, 0, 0, 0,31,31,30,29, 0, 0, 0, 0,
+
+        0, 0, 0,29,31,32,32,32,0, 0,29,31,32,32,32,32,
+        0, 0,30,31,31,31,32,32,0,29,31,31,31,31,31,31,
+        0,29,31,31,31,31,31,31,0,29,30,31,31,31,31,31,
+        0,29,29,30,30,31,31,31,0, 0,29,29,29,29,29,29,
+
+        32,32,32,31,29, 0, 0, 0,32,29,32,29,31,29, 0, 0,
+        28,30,32,30,31,30, 0, 0,31,30,31,30,31,31,29, 0,
+        31,31,31,31,31,31,29, 0,31,31,31,31,31,30,29, 0,
+        31,31,31,31,30,29,29, 0,29,29,29,29,29,29, 0, 0,
 
 
 };
 
 /* Dibujado de un Sprite de 32x32 pixels */
 
-u8 RomboGrande[1024] = 
-{
-	0,0,0,0,0,0,5,5,0,0,0,0,0,5,5,5,0,0,0,0,5,5,5,5,0,0,0,5,5,5,5,5,0,0,5,5,5,5,5,5,0,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,	
 
-	3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,	
-
-	3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,	
- 
-	5,5,0,0,0,0,0,0,5,5,5,0,0,0,0,0,5,5,5,5,0,0,0,0,5,5,5,5,5,0,0,0,5,5,5,5,5,5,0,0,5,5,5,5,5,5,5,0,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,	
-
-	5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
-
-	0,0,0,0,0,0,1,1,0,0,0,0,0,1,1,1,0,0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,0,0,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,	
-
-	1,1,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,	
-
-	5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
-
-	1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-
-	5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,5,5,5,5,5,5,5,0,0,5,5,5,5,5,5,0,0,0,5,5,5,5,5,0,0,0,0,5,5,5,5,0,0,0,0,0,5,5,5,0,0,0,0,0,0,5,5,	
-
-	5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,5,5,5,5,5,5,0,0,5,5,5,5,5,0,0,0,5,5,5,5,0,0,0,0,5,5,5,0,0,0,0,0,5,5,0,0,0,0,0,0,	
-
-	1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-
-	1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,0,0,0,1,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,1,1,	
-
-	3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,	
-
-	3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,	
-
-	1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,1,1,1,1,1,0,0,0,1,1,1,1,0,0,0,0,1,1,1,0,0,0,0,0,1,1,0,0,0,0,0,0,	
-};
 
 /* Para cada Sprite que se quiera llevar a pantalla hay que hacer una de estas funciones. */
 
@@ -187,8 +161,25 @@ oamSet(&oamMain, //main graphics engine context
 	); 
 oamUpdate(&oamMain); 
 }
+void BorrarEnemigo(int indice, int x, int y) {
+oamSet(&oamMain, //main graphics engine context
+	indice,  //oam index (0 to 127)  
+	x, y,    //x and y pixle location of the sprite
+	0,       //priority, lower renders last (on top)
+	0,       //this is the palette index if multiple palettes or the alpha value if bmp sprite	
+	SpriteSize_16x16,     
+	SpriteColorFormat_256Color, 
+	gfxEnem,//+16*16/2, 	//pointer to the loaded graphics
+	-1,                  	//sprite rotation data  
+	false,               	//double the size when rotating?
+	true,			//hide the sprite?
+	false, false, 		//vflip, hflip
+	false			//apply mosaic
+	); 
+oamUpdate(&oamMain); 
+}
 
-void MostrarRombo (int indice, int x, int y){
+void MostrarRombo (int indice, int x, int y){ 
 oamSet(&oamMain, //main graphics engine context
 	indice,  //oam index (0 to 127)  
 	x, y,    //x and y pixle location of the sprite
@@ -205,34 +196,15 @@ oamSet(&oamMain, //main graphics engine context
 	); 
 oamUpdate(&oamMain);  
 }
-
-void BorrarRomboGrande(int x, int y){
+void MostrarEnemigo (int indice, int x, int y){ 
 oamSet(&oamMain, //main graphics engine context
-	127,     //oam index (0 to 127)  
+	indice,  //oam index (0 to 127)  
 	x, y,    //x and y pixle location of the sprite
 	0,       //priority, lower renders last (on top)
 	0,       //this is the palette index if multiple palettes or the alpha value if bmp sprite	
 	SpriteSize_16x16,     
 	SpriteColorFormat_256Color, 
-	gfxRomboGrande,//+16*16/2,	//pointer to the loaded graphics
-	-1,                  	//sprite rotation data  
-	false,               	//double the size when rotating?
-	true,			//hide the sprite?
-	false, false, 		//vflip, hflip
-	false			//apply mosaic
-	); 
-oamUpdate(&oamMain); 
-}
-
-void MostrarRomboGrande (int x, int y){
-oamSet(&oamMain, //main graphics engine context
-	127,     //oam index (0 to 127)  
-	x, y,    //x and y pixle location of the sprite
-	0,       //priority, lower renders last (on top)
-	0,       //this is the palette index if multiple palettes or the alpha value if bmp sprite	
-	SpriteSize_16x16,     
-	SpriteColorFormat_256Color, 
-	gfxRomboGrande,//+16*16/2,	//pointer to the loaded graphics
+	gfxEnem,//+16*16/2, 	//pointer to the loaded graphics
 	-1,                  	//sprite rotation data  
 	false,               	//double the size when rotating?
 	false,			//hide the sprite?
@@ -243,50 +215,63 @@ oamUpdate(&oamMain);
 }
 
 
+
 void guardarSpritesEnMemoria(){ 
 	
 int i;
 	//para sprites de 16*16
 	for(i = 0; i < 16 * 16 / 2; i++) 
 	{	
-		gfxRombo[i] = Rombo[i*2] | (Rombo[(i*2)+1]<<8);				
+		gfxRombo[i] = Rombo[i*2] | (Rombo[(i*2)+1]<<8);	
+		gfxEnem[i] = Enem[i*2] | (Enem[(i*2)+1]<<8);				
 	}
-	//para sprites de 32*32
-	for(i = 0; i < 32 * 32 / 2; i++) 
-	{	
-		gfxRomboGrande[i] = RomboGrande[i*2] | (RomboGrande[(i*2)+1]<<8);				
-	}
+	
+	
 }
 
 
 
 void moverPersonaje(int * teclas_pulsadas){
-    if(teclas_pulsadas[IZDA] == 1){
-        double nueva_pos = personaje_pos_x - personaje_movimeinto_i;
-        if(nueva_pos <= -18.00){
-            nueva_pos = 239.00;
+    static double bitch;
+    if(Ecolision==NORMAL){
+    	if(teclas_pulsadas[IZDA] == 1){
+        	double nueva_pos = personaje_pos_x - personaje_movimeinto_i;
+        	if(nueva_pos <= -18.00){
+        		nueva_pos = 239.00;
+        	}
+        	personaje_pos_x = nueva_pos;
+    	}
+   	if(teclas_pulsadas[DCHA] == 1){
+   	     	double nueva_pos = personaje_pos_x + personaje_movimeinto_d;
+   	     	if (nueva_pos >= 247.00) {
+             		nueva_pos = 0.00;
+    		}
+        	personaje_pos_x = nueva_pos;
+    	}
+    }else if(Ecolision==G_IZDA){
+	double nueva_pos=personaje_pos_x - 0.03;
+	bitch +=0.03;
+	if(bitch>=70){
+		bitch=0;
+		Ecolision=NORMAL;
+	}
+	if(nueva_pos <= -18.00){
+        	nueva_pos = 239.00;
         }
+	personaje_pos_x = nueva_pos;
+    }else if(Ecolision==G_DCHA){
+	double nueva_pos = personaje_pos_x + 0.03;
+	bitch +=0.03;
+	if(bitch>=70){
+		bitch=0;
+		Ecolision=NORMAL;
+	}
+   	if (nueva_pos >= 250.00) {
+        	nueva_pos = 0.00;
+    	}
         personaje_pos_x = nueva_pos;
     }
-    if(teclas_pulsadas[DCHA] == 1){
-        double nueva_pos = personaje_pos_x + personaje_movimeinto_d;
-        if (nueva_pos >= 247.00) {
-            nueva_pos = 0.00;
-        }
-        personaje_pos_x = nueva_pos;
-    }
-    /*if(teclas_pulsadas[ARRIBA] == 1){
-        g_personaje = false;
-        personaje_pos_y -= 0.05;
-    }/*
-
-
-    /*
-    if(teclas_pulsadas[ABAJO] == 1){
-        pos_y += 0.01;
-    }
-     */
-    MostrarRombo(1,(int) personaje_pos_x, (int) personaje_pos_y);
+MostrarRombo(1,(int) personaje_pos_x, (int) personaje_pos_y);
 }
 
 

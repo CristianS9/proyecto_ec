@@ -50,9 +50,19 @@ defines.h
 // Asignar un nombre a cada estado
 #define NORMAL 0
 #define SALTO 1
-
-//...
-
+#define G_IZDA 1
+#define G_DCHA 2
+//typedef
+/*typedef struct{
+	int x;
+	int y;
+	bool giro;
+	bool isVisible;
+	int alt;
+	int anch;
+	int lim_dcha;
+	int lim_izda;
+}tEnem;*/
 
 // Variables globales
 extern int ESTADO;
@@ -61,6 +71,15 @@ extern int vida;
 extern int puntuacion;
 extern int estado;
 extern int apag;
+extern int enemCounter;
+extern int Ecolision;
+extern int dif;
+extern int spawn;
+extern int restavida;
+extern int rein;
+extern int killer;
+extern int tempK;
+//extern tEnem EO01,EO02,EO03,EO04,EO05;
 
 
-//...
+

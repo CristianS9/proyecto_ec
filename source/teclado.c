@@ -75,7 +75,7 @@ void movimientoPersonaje() {
     int *teclas_pulsadas = teclasPulsadas();
 
     if (teclas_pulsadas[IZDA] == 1 || teclas_pulsadas[DCHA] == 1 || teclas_pulsadas[ARRIBA] == 1 ||
-        teclas_pulsadas[ABAJO] == 1) {
+        teclas_pulsadas[ABAJO] == 1 || Ecolision != NORMAL) {
 
         elem_pos = elemento_en_pos((int) (personaje_pos_x + 16 + 0.01), (int) (personaje_pos_y + 16),1,1);
         if (teclas_pulsadas[DCHA] == 1 && elem_pos != -1 && elementos[elem_pos][2] == 1) {

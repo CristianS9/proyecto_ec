@@ -48,7 +48,10 @@ void tactil(){
      InhibirInterrupciones();
      pos.px= 0;
      pos.py = 0;
-     BorrarRombo(1,personaje_pos_x,personaje_pos_y);
+     int i;
+     for(i=1;i<7;i++){
+	     BorrarRombo(i,personaje_pos_x,personaje_pos_y);
+     }
 
      while(elemento_pausa != 15){
         touchRead(&pos);
@@ -71,10 +74,13 @@ void reiniciar(){
     puntuacion = 0;
     personaje_pos_x = 0;
     personaje_pos_y = 145;
+    rein=1;
+    ESTADO=NORMAL;
+    Ecolision=NORMAL;
 
 }
 
 void nivel(){
-	iprintf("\x1b[10;00H   No hay mas niveles aun");
+	iprintf("\x1b[14;00H   No hay mas niveles aun");
 }
 

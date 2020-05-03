@@ -1,6 +1,7 @@
 
 
 /* Inicializar la memoria de Sprites. */
+
 extern void initSpriteMem();
 
 /* Dentro de esta función hay que definir el color con el que se mostrará cada uno de los 256 
@@ -21,6 +22,8 @@ extern void guardarSpritesEnMemoria();
 
 extern void MostrarRombo(int indice, int x, int y);
 extern void BorrarRombo(int indice, int x, int y);
+extern void MostrarEnemigo(int indice, int x, int y);
+extern void BorrarEnemigo(int indice, int x, int y);
 
 extern void MostrarRomboGrande(int x, int y);
 extern void BorrarRomboGrande(int x, int y);
@@ -29,6 +32,7 @@ extern void moverPersonaje();
 // Variabels grlobales de sprites
 extern double personaje_pos_x;
 extern double personaje_pos_y;
+
 
 
 
