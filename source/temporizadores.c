@@ -17,6 +17,20 @@ void barraVida();
 // Rutina de atención a la interrupción del temporizador
 void IntTemp() {
 	static int tic=0;
+	vidasManager++;
+	if(vidasManager==181){
+		if(ViVi==5){
+			ViVi=0;
+		}else{
+			ViVi++;
+		}
+		if(ViAnt==5){
+			ViAnt=0;
+		}else{
+			ViAnt++;
+		}
+		vidasManager=0;
+	}
 	if(enemCounter>0){
 		enemCounter++;
 		if(enemCounter==30){
@@ -28,6 +42,13 @@ void IntTemp() {
 		if(restavida==3){
 			vida -=25;
 			restavida=0;
+		}
+	}
+	if(sumaV>0){
+		sumaV++;
+		if(sumaV==3){
+			vida +=25;
+			sumaV=0;
 		}
 	}
 	if(tempK>0){

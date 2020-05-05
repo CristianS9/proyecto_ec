@@ -1,4 +1,4 @@
-main.o: /home/iker/proyecto_ec/source/main.c \
+vida.o: /home/iker/proyecto_ec/source/vida.c \
  /opt/devkitpro/libnds/include/nds.h \
  /opt/devkitpro/libnds/include/nds/libversion.h \
  /opt/devkitpro/libnds/include/nds/ndstypes.h \
@@ -59,19 +59,14 @@ main.o: /home/iker/proyecto_ec/source/main.c \
  /opt/devkitpro/libnds/include/nds/arm9/video.h \
  /opt/devkitpro/libnds/include/nds/arm9/videoGL.h \
  /opt/devkitpro/libnds/include/nds/arm9/nand.h \
- /home/iker/proyecto_ec/include/fondos.h \
- /home/iker/proyecto_ec/include/sprites.h \
  /home/iker/proyecto_ec/include/defines.h \
  /home/iker/proyecto_ec/include/sprites.h \
  /home/iker/proyecto_ec/include/gravedad.h \
  /home/iker/proyecto_ec/include/elementos_o.h \
- /home/iker/proyecto_ec/include/rutserv.h \
- /home/iker/proyecto_ec/include/teclado.h \
- /home/iker/proyecto_ec/include/temporizadores.h \
- /home/iker/proyecto_ec/include/gravedad.h \
- /home/iker/proyecto_ec/include/enemigos.h \
- /home/iker/proyecto_ec/include/vida.h \
- /home/iker/proyecto_ec/include/elementos.h
+ /home/iker/proyecto_ec/include/sprites.h \
+ /home/iker/proyecto_ec/include/fondos.h \
+ /home/iker/proyecto_ec/include/elementos.h \
+ /home/iker/proyecto_ec/include/gravedad.h
 
 /opt/devkitpro/libnds/include/nds.h:
 
@@ -193,10 +188,6 @@ main.o: /home/iker/proyecto_ec/source/main.c \
 
 /opt/devkitpro/libnds/include/nds/arm9/nand.h:
 
-/home/iker/proyecto_ec/include/fondos.h:
-
-/home/iker/proyecto_ec/include/sprites.h:
-
 /home/iker/proyecto_ec/include/defines.h:
 
 /home/iker/proyecto_ec/include/sprites.h:
@@ -205,16 +196,10 @@ main.o: /home/iker/proyecto_ec/source/main.c \
 
 /home/iker/proyecto_ec/include/elementos_o.h:
 
-/home/iker/proyecto_ec/include/rutserv.h:
+/home/iker/proyecto_ec/include/sprites.h:
 
-/home/iker/proyecto_ec/include/teclado.h:
-
-/home/iker/proyecto_ec/include/temporizadores.h:
-
-/home/iker/proyecto_ec/include/gravedad.h:
-
-/home/iker/proyecto_ec/include/enemigos.h:
-
-/home/iker/proyecto_ec/include/vida.h:
+/home/iker/proyecto_ec/include/fondos.h:
 
 /home/iker/proyecto_ec/include/elementos.h:
+
+/home/iker/proyecto_ec/include/gravedad.h:

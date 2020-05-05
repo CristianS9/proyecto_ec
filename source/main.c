@@ -17,6 +17,7 @@ dovoto y otro de Jaeden Amero
 #include "temporizadores.h"
 #include "gravedad.h"
 #include "enemigos.h"
+#include "vida.h"
 #include "elementos.h"
 
 
@@ -43,8 +44,13 @@ int dif;
 int spawn=2;
 int restavida=0;
 int rein=0;
+int rein2=0;
 int killer=1;
 int tempK=0;
+int sumaV=0;
+int vidasManager=0;
+int ViAnt=0;
+int ViVi=1;
 
 int main() {
 	
@@ -92,7 +98,8 @@ int main() {
 
 
 
-
+	//MostrarParachute(7,90,90);
+	//MostrarVida(8,50,50);
 	MostrarRombo(1,personaje_pos_x,personaje_pos_y);
 
 
@@ -103,6 +110,7 @@ int main() {
 
 	while(apag==0){
 		if(vida>0){
+			updateObjects();
 			updateLife();
 		    	movimientoPersonaje();
 	  	      	gravedad();

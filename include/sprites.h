@@ -25,6 +25,11 @@ extern void BorrarRombo(int indice, int x, int y);
 extern void MostrarEnemigo(int indice, int x, int y);
 extern void BorrarEnemigo(int indice, int x, int y);
 
+extern void MostrarVida(int indice, int x, int y);
+extern void BorrarVida(int indice, int x, int y);
+extern void MostrarParachute(int indice, int x, int y);
+extern void BorrarParachute(int indice, int x, int y);
+
 extern void MostrarRomboGrande(int x, int y);
 extern void BorrarRomboGrande(int x, int y);
 extern void moverPersonaje();

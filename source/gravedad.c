@@ -27,17 +27,17 @@ void gravedadPersonaje(){
     nueva_posicion = personaje_pos_y;
 
     if(g_personaje && ESTADO == NORMAL){
-        aceleracion += 0.000004;
+        aceleracion += 0.000004*3.5;
         if(!paracaidas){
             nueva_posicion += aceleracion;
         } else{
-            nueva_posicion += 0.003;
+            nueva_posicion += 0.003*3;
         }
 
     } else if(ESTADO == SALTO){
         if((antp-(int)personaje_pos_y)<68){
 
-            		nueva_posicion -= 0.015001;
+            		nueva_posicion -= 0.015001*3;
             		personaje_pos_y = nueva_posicion;
 
         }else{
@@ -67,8 +67,11 @@ void gravedadPersonaje(){
 
         }
     }
-
-    MostrarRombo(1,(int) personaje_pos_x, (int) personaje_pos_y);
+    if(!paracaidas){
+	MostrarRombo(1,(int) personaje_pos_x, (int) personaje_pos_y);
+    }else{
+	MostrarParachute(1,(int) personaje_pos_x, (int) personaje_pos_y);
+    }
 
 }
 
