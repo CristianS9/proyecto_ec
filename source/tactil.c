@@ -75,6 +75,7 @@ void reiniciar(){
     personaje_pos_x = 0;
     personaje_pos_y = 145;
     rein=1;
+    rein2=1;
     ESTADO=NORMAL;
     Ecolision=NORMAL;
 

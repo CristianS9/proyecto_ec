@@ -107,7 +107,7 @@ void IntTec() {
     }
 
 
-    MostrarRombo(1,(int) personaje_pos_x, (int) personaje_pos_y);
+    //MostrarRombo(1,(int) personaje_pos_x, (int) personaje_pos_y);
 }
 
 

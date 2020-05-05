@@ -79,6 +79,11 @@ extern int restavida;
 extern int rein;
 extern int killer;
 extern int tempK;
+extern int rein2;
+extern int sumaV;
+extern int vidasManager;
+extern int ViVi;
+extern int ViAnt;
 //extern tEnem EO01,EO02,EO03,EO04,EO05;
 
 

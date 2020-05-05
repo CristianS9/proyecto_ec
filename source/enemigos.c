@@ -71,6 +71,7 @@ void updateLife(){
 				paracaidas=false;
 				enemCounter=1;
 				eList[i][3]=0;
+				puntuacion +=20;
 			}else if(ESTADO==SALTO){
 				ESTADO=NORMAL;
 				killer=0;

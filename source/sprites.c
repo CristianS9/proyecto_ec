@@ -14,10 +14,14 @@ u16* gfxRombo;
 
 u16* gfxEnem;
 
+u16* gfxOvida;
+
+u16* gfxParachute;
+
 double personaje_pos_x = 0.0;
 double personaje_pos_y = 145.0;
-double personaje_movimeinto_i = 0.01;
-double personaje_movimeinto_d = 0.01;
+double personaje_movimeinto_i = 0.035;
+double personaje_movimeinto_d = 0.035;
 
 
 /* Inicializar la memoria de Sprites. */
@@ -30,6 +34,10 @@ void initSpriteMem() {
 	gfxRombo =    oamAllocateGfx(&oamMain, SpriteSize_16x16, SpriteColorFormat_256Color);
 	
 	gfxEnem = oamAllocateGfx(&oamMain, SpriteSize_16x16, SpriteColorFormat_256Color);
+
+	gfxOvida = oamAllocateGfx(&oamMain, SpriteSize_16x16, SpriteColorFormat_256Color);
+
+	gfxParachute = oamAllocateGfx(&oamMain, SpriteSize_16x16, SpriteColorFormat_256Color);
 }
 
 
@@ -111,6 +119,50 @@ u8 Rombo[256] =
 
 
 };
+u8 Parachute[256] = 
+{
+
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 19, 19, 29, 29, 29, 0, 0, 19, 19, 19, 29, 29, 29, 
+0, 0, 19, 19, 0, 0, 0, 0, 0, 19, 19, 0, 6, 0, 0, 0, 
+0, 19, 0, 0, 0, 6, 25, 25, 0, 0, 0, 0, 25, 27, 28, 28, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+29, 29, 29, 19, 19, 0, 0, 0, 29, 29, 29, 19, 19, 19, 0, 0, 
+0, 0, 0, 0, 19, 19, 0, 0, 0, 0, 0, 6, 0, 19, 19, 0, 
+25, 25, 6, 0, 0, 0, 19, 0, 28, 28, 27, 27, 0, 0, 0, 0, 
+0, 0, 0, 6, 28, 28, 28, 28, 0, 0, 25, 28, 6, 28, 28, 28, 
+0, 0, 27, 28, 6, 28, 28, 28, 0, 25, 28, 28, 6, 28, 28, 28, 
+0, 25, 28, 28, 6, 28, 28, 28, 0, 25, 27, 28, 6, 28, 28, 28, 
+0, 25, 6, 6, 27, 28, 28, 28, 0, 0, 25, 25, 25, 25, 25, 25, 
+28, 28, 28, 28, 26, 0, 0, 0, 28, 25, 28, 25, 28, 6, 0, 0, 
+28, 27, 28, 27, 28, 6, 0, 0, 28, 27, 28, 27, 6, 28, 25, 0, 
+28, 28, 28, 28, 6, 28, 25, 0, 28, 28, 28, 28, 28, 6, 25, 0, 
+28, 28, 28, 28, 27, 6, 25, 0, 25, 25, 25, 25, 25, 25, 0, 0, 
+
+
+};
+u8 Ovida[256] = 
+{
+
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 25, 25, 0, 0, 0, 0, 0, 25, 27, 27, 
+0, 0, 0, 0, 25, 27, 27, 27, 0, 0, 0, 0, 25, 27, 27, 27, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+25, 25, 0, 0, 0, 0, 0, 0, 27, 27, 25, 0, 0, 0, 0, 0, 
+28, 27, 27, 25, 0, 0, 0, 0, 27, 28, 27, 25, 0, 0, 0, 0, 
+0, 0, 0, 0, 25, 27, 27, 27, 0, 0, 0, 0, 25, 27, 27, 27, 
+0, 0, 0, 0, 0, 25, 27, 27, 0, 0, 0, 0, 0, 0, 25, 25, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+27, 27, 27, 25, 0, 0, 0, 0, 27, 27, 27, 25, 0, 0, 0, 0, 
+27, 27, 25, 0, 0, 0, 0, 0, 25, 25, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+
+
+};
 u8 Enem[256] = 
 {
 
@@ -179,6 +231,41 @@ oamSet(&oamMain, //main graphics engine context
 oamUpdate(&oamMain); 
 }
 
+void BorrarVida(int indice, int x, int y) {
+oamSet(&oamMain, //main graphics engine context
+	indice,  //oam index (0 to 127)  
+	x, y,    //x and y pixle location of the sprite
+	0,       //priority, lower renders last (on top)
+	0,       //this is the palette index if multiple palettes or the alpha value if bmp sprite	
+	SpriteSize_16x16,     
+	SpriteColorFormat_256Color, 
+	gfxOvida,//+16*16/2, 	//pointer to the loaded graphics
+	-1,                  	//sprite rotation data  
+	false,               	//double the size when rotating?
+	true,			//hide the sprite?
+	false, false, 		//vflip, hflip
+	false			//apply mosaic
+	); 
+oamUpdate(&oamMain); 
+}
+void BorrarParachute(int indice, int x, int y) {
+oamSet(&oamMain, //main graphics engine context
+	indice,  //oam index (0 to 127)  
+	x, y,    //x and y pixle location of the sprite
+	0,       //priority, lower renders last (on top)
+	0,       //this is the palette index if multiple palettes or the alpha value if bmp sprite	
+	SpriteSize_16x16,     
+	SpriteColorFormat_256Color, 
+	gfxParachute,//+16*16/2, 	//pointer to the loaded graphics
+	-1,                  	//sprite rotation data  
+	false,               	//double the size when rotating?
+	true,			//hide the sprite?
+	false, false, 		//vflip, hflip
+	false			//apply mosaic
+	); 
+oamUpdate(&oamMain); 
+}
+
 void MostrarRombo (int indice, int x, int y){ 
 oamSet(&oamMain, //main graphics engine context
 	indice,  //oam index (0 to 127)  
@@ -213,6 +300,40 @@ oamSet(&oamMain, //main graphics engine context
 	); 
 oamUpdate(&oamMain);  
 }
+void MostrarVida (int indice, int x, int y){ 
+oamSet(&oamMain, //main graphics engine context
+	indice,  //oam index (0 to 127)  
+	x, y,    //x and y pixle location of the sprite
+	0,       //priority, lower renders last (on top)
+	0,       //this is the palette index if multiple palettes or the alpha value if bmp sprite	
+	SpriteSize_16x16,     
+	SpriteColorFormat_256Color, 
+	gfxOvida,//+16*16/2, 	//pointer to the loaded graphics
+	-1,                  	//sprite rotation data  
+	false,               	//double the size when rotating?
+	false,			//hide the sprite?
+	false, false, 		//vflip, hflip
+	false			//apply mosaic
+	); 
+oamUpdate(&oamMain);  
+}
+void MostrarParachute (int indice, int x, int y){ 
+oamSet(&oamMain, //main graphics engine context
+	indice,  //oam index (0 to 127)  
+	x, y,    //x and y pixle location of the sprite
+	0,       //priority, lower renders last (on top)
+	0,       //this is the palette index if multiple palettes or the alpha value if bmp sprite	
+	SpriteSize_16x16,     
+	SpriteColorFormat_256Color, 
+	gfxParachute,//+16*16/2, 	//pointer to the loaded graphics
+	-1,                  	//sprite rotation data  
+	false,               	//double the size when rotating?
+	false,			//hide the sprite?
+	false, false, 		//vflip, hflip
+	false			//apply mosaic
+	); 
+oamUpdate(&oamMain);  
+}
 
 
 
@@ -223,7 +344,10 @@ int i;
 	for(i = 0; i < 16 * 16 / 2; i++) 
 	{	
 		gfxRombo[i] = Rombo[i*2] | (Rombo[(i*2)+1]<<8);	
-		gfxEnem[i] = Enem[i*2] | (Enem[(i*2)+1]<<8);				
+		gfxEnem[i] = Enem[i*2] | (Enem[(i*2)+1]<<8);
+		gfxOvida[i] = Ovida[i*2] | (Ovida[(i*2)+1]<<8);
+		gfxParachute[i] = Parachute[i*2] | (Parachute[(i*2)+1]<<8);	
+			
 	}
 	
 	
@@ -249,7 +373,7 @@ void moverPersonaje(int * teclas_pulsadas){
         	personaje_pos_x = nueva_pos;
     	}
     }else if(Ecolision==G_IZDA){
-	double nueva_pos=personaje_pos_x - 0.03;
+	double nueva_pos=personaje_pos_x - 0.05;
 	bitch +=0.03;
 	if(bitch>=70){
 		bitch=0;
@@ -260,7 +384,7 @@ void moverPersonaje(int * teclas_pulsadas){
         }
 	personaje_pos_x = nueva_pos;
     }else if(Ecolision==G_DCHA){
-	double nueva_pos = personaje_pos_x + 0.03;
+	double nueva_pos = personaje_pos_x + 0.05;
 	bitch +=0.03;
 	if(bitch>=70){
 		bitch=0;
@@ -271,7 +395,7 @@ void moverPersonaje(int * teclas_pulsadas){
     	}
         personaje_pos_x = nueva_pos;
     }
-MostrarRombo(1,(int) personaje_pos_x, (int) personaje_pos_y);
+//MostrarRombo(1,(int) personaje_pos_x, (int) personaje_pos_y);
 }
 
 
