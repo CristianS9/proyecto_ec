@@ -42,12 +42,17 @@ void updateObjects(){
 		   && personaje_pos_y<=(vList[i][1]+16)
 		   && personaje_pos_y>=(vList[i][1]-16)
 		   && vList[i][2]==1){
-			sumaV=1;
+			//sumaV=1;
+			if(vida>=75){
+				vida=100;
+			}else{
+				vida +=25;
+			}
 			vList[i][2]=0;
 		}
-		if(vList[i][2]==1){
+		if(vList[i][2]==1 && vida>0){
 			MostrarVida(i+7,vList[i][0],vList[i][1]);
-		}else if(vList[i][2]==0){
+		}else if(vList[i][2]==0 || vida<=0){
 			BorrarVida(i+7,vList[i][0],vList[i][1]);
 		}	
 	}

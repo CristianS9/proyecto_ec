@@ -28,10 +28,12 @@ void enemMov(){
 	int i;
 	for(i=0;i<numEnem;i++){
 		//izda o dcha
-		if(eList[i][2]==0){
-			eList[i][0]=eList[i][0]+1;
-		}else{
-			eList[i][0]=eList[i][0]-1;
+		if(eList[i][3]==1){
+			if(eList[i][2]==0){
+				eList[i][0]=eList[i][0]+1;
+			}else{
+				eList[i][0]=eList[i][0]-1;
+			}
 		}
 		//giro check
 		if(eList[i][0]<=eList[i][7]){

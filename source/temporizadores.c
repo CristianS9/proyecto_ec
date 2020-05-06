@@ -44,13 +44,13 @@ void IntTemp() {
 			restavida=0;
 		}
 	}
-	if(sumaV>0){
+	/*if(sumaV>0){
 		sumaV++;
 		if(sumaV==3){
 			vida +=25;
 			sumaV=0;
 		}
-	}
+	}*/
 	if(tempK>0){
 		tempK++;
 		if(tempK==5){

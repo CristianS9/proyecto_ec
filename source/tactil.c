@@ -49,7 +49,7 @@ void tactil(){
      pos.px= 0;
      pos.py = 0;
      int i;
-     for(i=1;i<7;i++){
+     for(i=1;i<13;i++){
 	     BorrarRombo(i,personaje_pos_x,personaje_pos_y);
      }
 
@@ -78,6 +78,8 @@ void reiniciar(){
     rein2=1;
     ESTADO=NORMAL;
     Ecolision=NORMAL;
+    iprintf("\x1b[01;17H vida:    ");
+    iprintf("\x1b[01;00H puntuacion:     ");
 
 }
 
